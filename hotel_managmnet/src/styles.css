@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.backBtn{
+ position: relative;
+ top: 60px;  left: 170px;
+ height: 25px;
+ width: 100px;
+ background-color: rgb(202, 212, 212);
+}
+.backBtn:hover{
+    background-color: rgb(172, 185, 196);
+}
