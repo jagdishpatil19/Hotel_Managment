@@ -10,4 +10,7 @@ export class OwnerLandingComponent {
   backLanding(){
 this.router.navigateByUrl('landing')
   }
+   submit(data:any){
+console.log(data)
+   }
 }

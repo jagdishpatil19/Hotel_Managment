@@ -12,4 +12,7 @@ export class UserLandingComponent {
   backLanding(){
 this.router.navigateByUrl('landing')
   }
+  submit(userData:any){
+    console.log(userData)
+  }
 }

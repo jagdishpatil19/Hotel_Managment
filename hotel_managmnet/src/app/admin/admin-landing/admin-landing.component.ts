@@ -10,4 +10,8 @@ export class AdminLandingComponent {
   backLanding(){
 this.router.navigateByUrl('landing')
   }
+
+  submit(formData:any){
+console.log(formData)
+  }
 }
