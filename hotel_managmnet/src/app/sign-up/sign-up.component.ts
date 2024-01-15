@@ -1,41 +1,56 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup ,FormControl, Validators, MaxLengthValidator } from '@angular/forms';
+import { FormBuilder, FormGroup,FormControl,Validators,MaxLengthValidator,} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
-space:string='    '
-  constructor(private formBuilder:FormBuilder){}
-  signUp!:FormGroup
+  constructor(private formBuilder: FormBuilder) {}
+  signUpForm!: FormGroup;
 
-  ngOnInit(){
-    this.formLoad()
+  ngOnInit() {
+    this.formLoad();
   }
-  formLoad(){
-     this.signUp=this.formBuilder.group({
-    name:['',[Validators.required]],
-    mobileNo:['',[ Validators.required,Validators.maxLength(10),Validators.minLength(10)]],
-    panNo:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$')]],
-    email:[''],
-    city:['Mumbai'],
-    gender:[''],
-    password:[''],
-    confirmPassword:[''],
-    Tnc:['']
-     })
+  formLoad() {
+    this.signUpForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      mobileNo: [
+        '',
+        [
+          Validators.required,
+          Validators.maxLength(10),
+          Validators.minLength(10),
+        ],
+      ],
+      panNo: ['', [ Validators.required ,Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$')]],
+      email: ['', [Validators.required, Validators.email]],
+      city: [''],
+      gender: ['',[Validators.required]],
+      password: ['', [Validators.required]],
+      confirmPassword: ['', [Validators.required]],
+      Tnc: [''],
+    });
   }
-  
-  submit(){
-    console.log(this.signUp.value)
+
+  submit() {
+    console.log(this.signUpForm.value);
   }
-confirmPasswordError:boolean=false
-  passwordHideShow(){
-    let pass=this.signUp.get("password")?.value
-    let confirmPass=this.signUp.get("confirmPassword")?.value
-    console.log(pass,'this is password')
+
+  passwordHide = true;
+  confirmPasswordHide = true;
+
+  hide = true;
+  hide2=true
+  confirmPasswordError: boolean = false;
+  passwordMatch() {
+    let pass = this.signUpForm.get('password')?.value;
+    let confirmPass = this.signUpForm.get('confirmPassword')?.value;
+
+    console.log(pass)
+    console.log(confirmPass)
+     
     if(pass!==confirmPass){
       this.confirmPasswordError=true
     }

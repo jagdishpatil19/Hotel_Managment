@@ -1,106 +1,108 @@
 <body>
   <div class="formDiv">
-    <div class="h1"><h1>Login</h1></div>
-    <form [formGroup]="signUp" (ngSubmit)="submit()">
-      <!-- <label>Full Name</label><br> -->
-      <input
-        class="allinput"
-        type="text"
-        placeholder="Enter Your Name"
-        formControlName="name"
-      /><br />
-      <span *ngIf="signUp.get('name')?.invalid && signUp.get('name')?.touched"
-        >User name is required</span
-      ><br />
-      <!-- <label>Mobile No</label><br> -->
-      <input
-        class="allinput"
-        type="text"
-        placeholder="Enter your Mobile No"
-        formControlName="mobileNo"
-      /><br />
-      <span
-        *ngIf="
-          (signUp.get('mobileNo')?.invalid &&
-            signUp.get('mobileNo')?.touched &&
-            !signUp.get('mobileNo')?.hasError('maxlength')) ||
-          signUp.get('mobileNo')?.hasError('minlength')
-        "
-        >Mobaile number is required</span
-      >
-      <span *ngIf="signUp.get('mobileNo')?.hasError('maxlength')"
-        >Mobile number enter 10 digit </span
-      ><br />
-      <!-- <label>PAN NO</label><br> -->
-      <input
-        class="allinput"
-        type="text"
-        placeholder="Enter Your PAN No"
-        formControlName="panNo"
-      /><br /> <span *ngIf="signUp.get('panNo')?.hasError('pattern')">Enter a valid number</span><br />
-      <!-- <label>Email Id</label><br> -->
-      <input
-        class="allinput"
-        type="email"
-        placeholder="Enter your Email Id"
-        formControlName="email"
-      /><br /><br />
-      <label>Select Your City-</label>
-      <select formControlName="city">
-        <option selected value="Mumbai">Mumbai</option>
-        <option value="Pune">Pune</option>
-        <option value="Kolhapur">Kolhapur</option>
-        <option value="Sangli">Sangli</option>
-        <option value="Nashik">Nashik</option>
-        <option value="Satara">Satara</option>
-        <option value="Belgam">Belgam</option></select
-      ><br /><br />
+    <div class="h1"><h1>SignUp</h1></div>
+    <br /><br />
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Enter Your Name</mat-label>
+        <input matInput placeholder="Enter Your Name" formControlName="name" />
+        <mat-error
+          *ngIf="
+            signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched">User name is required</mat-error>
+      </mat-form-field>
 
-      <label>Gender</label><br />
-      <label>Male</label>
-      <input name="gender" type="radio" value="Male" formControlName="gender" /> <span>{{space}}</span> 
-      <label>Female</label
-      ><input
-        name="gender"
-        type="radio"
-        value="Female"
-        formControlName="gender"
-      /><span>{{space}}</span> 
-      <label>Other</label>
-      <input
-        name="gender"
-        type="radio"
-        value="other"
-        formControlName="gender"
-      /><br /><br />
-      <!-- <label>Password</label><br> -->
-      <input
-        class="allinput"
-        type="password"
-        placeholder="Set Your Password"
-        formControlName="password"
-        (keyup)="passwordHideShow()"
-      /><br /><br />
-      <!-- <label> Confirm Password</label><br> -->
-      <input
-        class="allinput"
-        type="password"
-        placeholder="Confirm Your Password"
-        formControlName="confirmPassword"
-        (keyup)="passwordHideShow()"
-      /><br />
-      <span *ngIf="confirmPasswordError">Plese enter correct password</span><br />
-      <!-- <label>Tnc</label><br> -->
-      <input
-        class="allinput"
-        type="text"
-        placeholder="Tnc"
-        formControlName="Tnc"
-      />
+     
 
-      <button mat-raised-button color="primary" [disabled]="signUp.invalid">
+      <br />
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Enter Your Number</mat-label>
+        <input
+          matInput
+          placeholder="Enter Your Number"
+          formControlName="mobileNo"/>
+        <mat-error
+          *ngIf="
+            (signUpForm.get('mobileNo')?.invalid &&
+              signUpForm.get('mobileNo')?.touched &&
+              !signUpForm.get('mobileNo')?.hasError('maxlength')) ||
+            signUpForm.get('mobileNo')?.hasError('minlength')">Mobaile number is required</mat-error>
+        <mat-error *ngIf="signUpForm.get('mobileNo')?.hasError('maxlength')">Mobile number enter 10 digit</mat-error>
+      </mat-form-field>
+
+      <br />
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Enter PAN No</mat-label>
+        <input matInput placeholder="EX.AGJGH8978H" formControlName="panNo" />
+        <mat-error *ngIf="signUpForm.get('panNo')?.hasError('pattern')">Enter a valid number</mat-error>
+      </mat-form-field>
+
+      <br />
+      <mat-form-field class="input">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="abc@example.com" formControlName="email" />
+        <mat-error *ngIf="signUpForm.get('email')?.hasError('required')">You must enter a value</mat-error >
+        <mat-error *ngIf="signUpForm.get('email')?.hasError('email')">Not a valid email</mat-error>
+      </mat-form-field>
+
+       <br />
+      <mat-form-field class="input">
+        <mat-label>Select Your City</mat-label>
+        <mat-select formControlName="city">
+          <mat-option value="Mumbai">Mumbai</mat-option>
+          <mat-option value="Pune">Pune</mat-option>
+          <mat-option value="Kolhapur">Kolhapur</mat-option>
+          <mat-option value="Sangli">Sangli</mat-option>
+          <mat-option value="Satara">Satara</mat-option>
+          <mat-option value="Nashik">Nashik</mat-option>
+          <mat-option value="Belgam">Belgam</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br />
+
+      <label>Select Your Gender: </label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+        <mat-radio-button value="Other">Other</mat-radio-button>
+      </mat-radio-group>
+
+      <br /><br />
+  
+      <mat-form-field  class="input">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password"  (keyup)="passwordMatch()" >
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      
+       <br />
+ 
+       <mat-form-field  class="input">
+        <mat-label> Confirm Password</mat-label>
+        <input matInput [type]="hide2 ? 'password' : 'text'" formControlName="confirmPassword"  (keyup)="passwordMatch()">
+        <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
+          <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    <mat-error *ngIf="confirmPasswordError" >Plese enter correct password</mat-error>
+     
+      <br />
+       
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Tnc</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="Tnc" Form />
+      </mat-form-field>
+
+      <button
+        class="submitBtn"
+        mat-raised-button
+        color="primary"
+        [disabled]="signUpForm.invalid">
         Submit
-      </button>
+      </button>  
+  <br><br><br> 
     </form>
   </div>
 </body>
