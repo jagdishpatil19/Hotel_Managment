@@ -8,11 +8,5 @@ import { Router } from '@angular/router';
 })
 export class UserLandingComponent {
 
-  constructor(private router:Router){}
-  backLanding(){
-this.router.navigateByUrl('landing')
-  }
-  submit(userData:any){
-    console.log(userData)
-  }
+  
 }

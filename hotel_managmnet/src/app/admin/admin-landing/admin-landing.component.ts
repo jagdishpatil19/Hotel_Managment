@@ -6,12 +6,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-landing.component.css']
 })
 export class AdminLandingComponent {
-  constructor(private router:Router){}
-  backLanding(){
-this.router.navigateByUrl('landing')
-  }
-
-  submit(formData:any){
-console.log(formData)
-  }
+  
 }

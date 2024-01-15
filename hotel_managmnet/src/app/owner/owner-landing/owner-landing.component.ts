@@ -6,11 +6,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./owner-landing.component.css']
 })
 export class OwnerLandingComponent {
-  constructor(private router:Router){}
-  backLanding(){
-this.router.navigateByUrl('landing')
-  }
-   submit(data:any){
-console.log(data)
-   }
+   
 }

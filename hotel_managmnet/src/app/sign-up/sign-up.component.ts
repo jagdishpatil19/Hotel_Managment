@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup ,FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup ,FormControl, Validators, MaxLengthValidator } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup ,FormControl, Validators } from '@angular/forms'
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent {
-
+space:string='    '
   constructor(private formBuilder:FormBuilder){}
   signUp!:FormGroup
 
@@ -16,11 +16,11 @@ export class SignUpComponent {
   }
   formLoad(){
      this.signUp=this.formBuilder.group({
-    name:['',Validators.required],
-    mobileNo:['',Validators.required],
-    panNo:[''],
+    name:['',[Validators.required]],
+    mobileNo:['',[ Validators.required,Validators.maxLength(10),Validators.minLength(10)]],
+    panNo:['',[Validators.pattern('^[A-Z]{5}[0-9]{4}[A-Z]{1}$')]],
     email:[''],
-    city:[''],
+    city:['Mumbai'],
     gender:[''],
     password:[''],
     confirmPassword:[''],
@@ -30,5 +30,17 @@ export class SignUpComponent {
   
   submit(){
     console.log(this.signUp.value)
+  }
+confirmPasswordError:boolean=false
+  passwordHideShow(){
+    let pass=this.signUp.get("password")?.value
+    let confirmPass=this.signUp.get("confirmPassword")?.value
+    console.log(pass,'this is password')
+    if(pass!==confirmPass){
+      this.confirmPasswordError=true
+    }
+    else{
+      this.confirmPasswordError=false
+    }
   }
 }
