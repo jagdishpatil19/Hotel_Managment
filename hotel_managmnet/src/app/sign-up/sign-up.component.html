@@ -1,1 +1,40 @@
-<p>sign-up works!</p>
+ 
+<body>
+    <div class="formDiv">
+        <div class="h1"><h1>Login</h1></div>
+        <form [formGroup]="signUp" (ngSubmit)="submit()">
+            <!-- <label>Full Name</label><br> -->
+            <input  class="allinput" type="text" placeholder="Enter Your Name" formControlName="name"><br><br>
+            <!-- <label>Mobile No</label><br> -->
+         <input class="allinput" type="text" placeholder="Enter your Mobile No" formControlName="mobileNo"><br><br>
+            <!-- <label>PAN NO</label><br> -->
+            <input class="allinput" type="text" placeholder="Enter Your PAN No" formControlName="panNo"><br><br>
+            <!-- <label>Email Id</label><br> -->
+         <input class="allinput" type="email" placeholder="Enter your Email Id" formControlName="email"><br><br>
+            <label>Select Your City-</label>
+             <select formControlName="city" >
+                <option selected value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Kolhapur">Kolhapur</option>
+                <option value="Sangli">Sangli</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Satara">Satara</option>
+                <option value="Belgam">Belgam</option>
+             </select><br><br>
+      
+         
+         <label>Gender</label><br>
+         <label>Male</label> <input name="gender" type="radio" value="Male" formControlName="gender">
+         <label>Female</label><input name="gender"  type="radio" value="Female" formControlName="gender">
+         <label>Other</label> <input name="gender"  type="radio" value="other" formControlName="gender"><br><br>
+         <!-- <label>Password</label><br> -->
+         <input class="allinput" type="password" placeholder="Set Your Password" formControlName="password"><br><br>
+         <!-- <label> Confirm Password</label><br> -->
+         <input class="allinput" type="password" placeholder="Confirm Your Password" formControlName="confirmPassword"><br><br>
+         <!-- <label>Tnc</label><br> -->
+         <input class="allinput" type="text" placeholder="Tnc" formControlName="Tnc">
+    
+         <button   mat-raised-button color="primary" [disabled]="signUp.invalid">Submit</button>
+        </form>
+    </div>
+</body>

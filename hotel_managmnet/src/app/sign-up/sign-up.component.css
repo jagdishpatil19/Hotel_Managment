@@ -1,0 +1,44 @@
+body{
+    background:linear-gradient(rgb(164, 209, 255),rgb(145, 145, 255));
+}
+.formDiv{
+    height: 580px;
+    width: 350px;
+    background-color: white;
+     margin: auto;
+     position: relative;
+      top: 25px;
+     box-shadow: -8px 10px 20px rgb(93, 93, 93);
+     border-radius: 5px;
+}
+form  {
+    padding-left: 40px;
+    
+}
+
+ /* form input{
+    margin-top: 20px;
+ } */
+ .h1{
+    position: relative;
+    top: 5px;left: 100px;
+    width: 100px;
+    background-color: rgb(1, 196, 255); 
+    border-radius: 10px;
+ }
+ .h1 h1{
+    margin-left: 20px;
+ }
+ .allinput{
+    width: 250px;
+    height: 25px;
+    
+ }
+ form button{
+    position: relative;
+    top: 20px;left:40px;
+    width: 200px;
+    background-color: rgba(0, 0, 121, 0.842);
+    border-radius: 20px;
+ }  
+
