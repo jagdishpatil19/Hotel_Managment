@@ -16,9 +16,7 @@ export class SignUpComponent {
   formLoad() {
     this.signUpForm = this.formBuilder.group({
       name: ['', [Validators.required]],
-      mobileNo: [
-        '',
-        [
+      mobileNo: ['',[
           Validators.required,
           Validators.maxLength(10),
           Validators.minLength(10),
@@ -47,10 +45,7 @@ export class SignUpComponent {
   passwordMatch() {
     let pass = this.signUpForm.get('password')?.value;
     let confirmPass = this.signUpForm.get('confirmPassword')?.value;
-
-    console.log(pass)
-    console.log(confirmPass)
-     
+    
     if(pass!==confirmPass){
       this.confirmPasswordError=true
     }

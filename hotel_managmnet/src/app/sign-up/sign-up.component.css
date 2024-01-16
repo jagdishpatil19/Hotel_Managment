@@ -12,7 +12,7 @@ body{
      border-radius: 5px;
      overflow:auto;
 }
-form  {
+form{
     padding-left: 60px;
     
 }
@@ -29,6 +29,13 @@ form  {
     margin-left: 28px;
  }
   
+ .input{
+   width: 350px;
+ }
+ form i{
+   position: relative;
+   right: 10px;
+ }
  .submitBtn{
     position: relative;
     top: 20px;left:80px;
@@ -36,6 +43,4 @@ form  {
     background-color: rgba(0, 0, 121, 0.842);
     border-radius: 20px;
  }  
- .input{
-   width: 350px;
- }
+ 

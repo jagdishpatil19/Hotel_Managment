@@ -25,7 +25,7 @@
             (signUpForm.get('mobileNo')?.invalid &&
               signUpForm.get('mobileNo')?.touched &&
               !signUpForm.get('mobileNo')?.hasError('maxlength')) ||
-            signUpForm.get('mobileNo')?.hasError('minlength')">Mobaile number is required</mat-error>
+            signUpForm.get('mobileNo')?.hasError('minlength')">Mobile number is required</mat-error>
         <mat-error *ngIf="signUpForm.get('mobileNo')?.hasError('maxlength')">Mobile number enter 10 digit</mat-error>
       </mat-form-field>
 
@@ -72,9 +72,9 @@
       <mat-form-field  class="input">
         <mat-label>Enter your password</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password"  (keyup)="passwordMatch()" >
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <i mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
+        </i>
       </mat-form-field>
       
        <br />
@@ -82,9 +82,9 @@
        <mat-form-field  class="input">
         <mat-label> Confirm Password</mat-label>
         <input matInput [type]="hide2 ? 'password' : 'text'" formControlName="confirmPassword"  (keyup)="passwordMatch()">
-        <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
+        <i mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
           <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
+        </i>
       </mat-form-field>
     <mat-error *ngIf="confirmPasswordError" >Plese enter correct password</mat-error>
      
