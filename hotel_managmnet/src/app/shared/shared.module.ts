@@ -6,6 +6,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -15,7 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatIconModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
   ],
   exports:[
     MatButtonModule,
@@ -23,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatIconModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

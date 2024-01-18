@@ -6,6 +6,7 @@
       <mat-form-field appearance="fill" class="input">
         <mat-label>Enter Your Name</mat-label>
         <input matInput placeholder="Enter Your Name" formControlName="name" />
+        <mat-icon matSuffix>perm_identity</mat-icon>
         <mat-error
           *ngIf="
             signUpForm.get('name')?.invalid && signUpForm.get('name')?.touched">User name is required</mat-error>
@@ -20,6 +21,7 @@
           matInput
           placeholder="Enter Your Number"
           formControlName="mobileNo"/>
+          <mat-icon matSuffix>phone</mat-icon>
         <mat-error
           *ngIf="
             (signUpForm.get('mobileNo')?.invalid &&
@@ -33,6 +35,7 @@
       <mat-form-field appearance="fill" class="input">
         <mat-label>Enter PAN No</mat-label>
         <input matInput placeholder="EX.AGJGH8978H" formControlName="panNo" />
+        <mat-icon matSuffix>credit_card</mat-icon>
         <mat-error *ngIf="signUpForm.get('panNo')?.hasError('pattern')">Enter a valid number</mat-error>
       </mat-form-field>
 
@@ -40,6 +43,7 @@
       <mat-form-field class="input">
         <mat-label>Enter your email</mat-label>
         <input matInput placeholder="abc@example.com" formControlName="email" />
+        <mat-icon matSuffix>mail</mat-icon>
         <mat-error *ngIf="signUpForm.get('email')?.hasError('required')">You must enter a value</mat-error >
         <mat-error *ngIf="signUpForm.get('email')?.hasError('email')">Not a valid email</mat-error>
       </mat-form-field>

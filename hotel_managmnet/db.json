@@ -4,8 +4,27 @@
   "user": [
     {
       "name": "jagdish",
-      "mo": 7393739,
+      "mobileNo": "1123213211",
+      "panNo": "AGVRY7868G",
+      "email": "jd@gmail.com",
+      "city": "Kolhapur",
+      "gender": "Male",
+      "password": "jagdish",
+      "confirmPassword": "jagdish",
+      "Tnc": "no",
       "id": 1
+    },
+    {
+      "name": "shri",
+      "mobileNo": "2322313342",
+      "panNo": "AHTYU7878H",
+      "email": "shri@gmail.com",
+      "city": "Satara",
+      "gender": "Male",
+      "password": "shri",
+      "confirmPassword": "shri",
+      "Tnc": "no",
+      "id": 2
     }
   ],
   "hotelDetails": [],

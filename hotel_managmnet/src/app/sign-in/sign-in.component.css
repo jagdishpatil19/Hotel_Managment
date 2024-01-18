@@ -7,18 +7,21 @@
 body{
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: black;
-    min-height: 100vh;
+    /* align-items: center; */
+    /* background-color: black; */
+  background-image: url('https://i0.wp.com/www.lovelycoding.org/wp-content/uploads/2022/09/Hotel-Management-System.webp?resize=640%2C427&ssl=1');
+    background-size: cover;
+  min-height: 100vh;
     color: aliceblue;
 }
 .main-box{
-    position:relative;
+    position:relative;left: 450px; top: 100px;
     height: 450px;
     width: 400px;
     background-color: hsl(240, 83%, 9%);
     overflow: hidden;
 border-radius: 50px 0px;
+box-shadow: -10px 10px 30px rgb(255, 255, 255);
 
 }
 .main-box::before{
@@ -28,7 +31,7 @@ border-radius: 50px 0px;
     left: -50%;
     height: 450px;
     width: 400px;
-    background: linear-gradient(60deg,transparent,hsl(185, 98%, 51%));
+    background: linear-gradient(60deg,transparent,hsl(185, 100%, 50%));
     transform-origin: bottom right;
     animation: border 6s linear infinite;
 }
@@ -54,9 +57,12 @@ border-radius: 50px 0px;
     }
  }
 h2{
-    margin-top: 25px;
-    margin-left:140px;
-    color: rgb(11, 195, 232);
+     position: relative;
+     top: 18px;
+     left: 160px;
+    color: rgb(0, 217, 255);
+     font-weight: 900;
+     font-size: 30px;
 }
 input{
     font-size: 16px;
@@ -122,16 +128,19 @@ input:focus{
   form{
     position: absolute;
  inset: 2px; 
- background: rgb(0, 0, 20);
+ background: rgb(0, 0, 1);
+ /* background-image: url("https://images.pexels.com/photos/1842332/pexels-photo-1842332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+ /* background-size: cover; */
  z-index: 1;
  border-radius:100px 0px;
+ 
 
   }
   
   form span{
     color: red;
     position: relative;
-    left: 60px;
+    left: 30px;
     top: 5px;
   }
  form a{

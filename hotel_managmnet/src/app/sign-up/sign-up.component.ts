@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl,Validators,MaxLengthValidator,} from '@angular/forms';
+import { ApiCallService } from '../services/api-call.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup,FormControl,Validators,MaxLengthValidator,} from
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder ,private apiCall:ApiCallService) {}
   signUpForm!: FormGroup;
 
   ngOnInit() {
@@ -33,7 +34,10 @@ export class SignUpComponent {
   }
 
   submit() {
-    console.log(this.signUpForm.value);
+     
+    this.apiCall.postApiCall(this.signUpForm.value).subscribe((res)=>{
+     console.log(res)
+    })
   }
 
   passwordHide = true;
@@ -53,4 +57,5 @@ export class SignUpComponent {
       this.confirmPasswordError=false
     }
   }
+
 }

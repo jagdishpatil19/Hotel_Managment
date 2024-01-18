@@ -2,14 +2,18 @@
 <body>
     <div class="main-box">
         <form #adminSignIn="ngForm" (ngSubmit)="submit(adminSignIn.value)">
-         <h2>Admin Login</h2>
+         <h2>Login</h2>
         <br><br>
-        <input type="text"  placeholder=" Username" name="userName" #user="ngModel" ngModel required><br>
+        <input type="text"  placeholder=" Username" name="userName" #user="ngModel" (input)="getUserNameValue(user.value)" ngModel required><br>
+        <mat-icon style="position:relative; left: 320px; bottom: 28px;" matSuffix>perm_identity</mat-icon>
         <span *ngIf='user.invalid&&user.touched'>plese enter username</span>
         <br><br>
-        <input type="password"  placeholder="Password" name="password" #pass="ngModel" ngModel required><br>
+        <input   [type]="hide ? 'password' : 'text'" placeholder="Password" name="password" #pass="ngModel"  (input)="getPasswordValue(pass.value)"  ngModel required><br>
+        <i style="position:relative; left: 320px; bottom: 28px;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </i>
          <span *ngIf="pass.invalid&&pass.touched">Enter your correct password</span><br><br><br>
-    <button   class="submit" [disabled]="adminSignIn.invalid" >Submit</button>
+    <button   class="submit" [disabled]="adminSignIn.invalid" >LogIn</button>
     
     <br><br>
     <br>
