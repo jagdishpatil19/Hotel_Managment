@@ -5,14 +5,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiCallService {
+  journey: any;
 
   constructor(private httpClient:HttpClient) { }
-  userUrl="http://localhost:3000/user"
+  userUrl="http://localhost:3000"
 
   getApilCall(data:any){
      return this.httpClient.get(this.userUrl)
   }
   postApiCall(signUpData:any){
-    return this.httpClient.post(this.userUrl,signUpData)
+    let url=this.userUrl+'/'+this.journey
+    return this.httpClient.post(url,signUpData)
   }
 }

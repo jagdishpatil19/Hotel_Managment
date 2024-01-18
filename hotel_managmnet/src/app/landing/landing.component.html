@@ -1,6 +1,8 @@
  <div class="allButtons">
     
-<button routerLink='/signIn' mat-fab extended color="primary" >Admin</button>
-<button routerLink="/signIn" mat-fab extended color="white" >Owner</button>
-<button routerLink="/signIn" mat-fab extended color="accent">User</button>
+<button routerLink='/signIn' mat-fab extended color="primary" (click)="journey('admin')" >Admin</button>
+<button routerLink="/signIn"  mat-fab extended color="white"(click)="journey('owner')" >Owner</button>
+<button routerLink="/signIn" mat-fab extended color="accent" (click)="journey('user')">User</button>
  </div>
+
+ 

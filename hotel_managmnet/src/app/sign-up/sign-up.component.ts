@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl,Validators,MaxLengthValidator,} from '@angular/forms';
 import { ApiCallService } from '../services/api-call.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,7 +9,7 @@ import { ApiCallService } from '../services/api-call.service';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
-  constructor(private formBuilder: FormBuilder ,private apiCall:ApiCallService) {}
+  constructor(private formBuilder: FormBuilder ,private apiCallService:ApiCallService,private router:Router) {}
   signUpForm!: FormGroup;
 
   ngOnInit() {
@@ -33,12 +34,17 @@ export class SignUpComponent {
     });
   }
 
-  submit() {
-     
-    this.apiCall.postApiCall(this.signUpForm.value).subscribe((res)=>{
-     console.log(res)
-    })
+  result:any=''
+  async submit() {
+    let journey=this.apiCallService.journey
+     this.result=await this.apiCallService.postApiCall(this.signUpForm.value).toPromise()
+    if(this.result?.id){
+     this.router.navigateByUrl(journey+'/'+journey+'Landing')
+    }
   }
+
+
+
 
   passwordHide = true;
   confirmPasswordHide = true;
@@ -58,4 +64,7 @@ export class SignUpComponent {
     }
   }
 
+  reDirect(){
+    this.router.navigateByUrl('admin/adminLanding')
+  }
 }

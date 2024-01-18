@@ -1,30 +1,44 @@
 {
-  "admin": [],
-  "owner": [],
-  "user": [
+  "admin": [
     {
-      "name": "jagdish",
-      "mobileNo": "1123213211",
-      "panNo": "AGVRY7868G",
-      "email": "jd@gmail.com",
+      "name": "admin",
+      "mobileNo": "0987654321",
+      "panNo": "ADMIN1234A",
+      "email": "admin@gmail.com",
       "city": "Kolhapur",
       "gender": "Male",
-      "password": "jagdish",
-      "confirmPassword": "jagdish",
+      "password": "admin",
+      "confirmPassword": "admin",
+      "Tnc": "yes",
+      "id": 1
+    }
+  ],
+  "owner": [
+    {
+      "name": "owner",
+      "mobileNo": "1234567890",
+      "panNo": "OWNER1234J",
+      "email": "owner@gmail.com",
+      "city": "Nashik",
+      "gender": "Male",
+      "password": "owner",
+      "confirmPassword": "owner",
       "Tnc": "no",
       "id": 1
-    },
+    }
+  ],
+  "user": [
     {
-      "name": "shri",
-      "mobileNo": "2322313342",
-      "panNo": "AHTYU7878H",
-      "email": "shri@gmail.com",
-      "city": "Satara",
-      "gender": "Male",
-      "password": "shri",
-      "confirmPassword": "shri",
-      "Tnc": "no",
-      "id": 2
+      "name": "user",
+      "mobileNo": "1234512345",
+      "panNo": "USERT1234U",
+      "email": "user@gmail.com",
+      "city": "Nashik",
+      "gender": "Female",
+      "password": "user",
+      "confirmPassword": "user",
+      "Tnc": "yes",
+      "id": 1
     }
   ],
   "hotelDetails": [],
