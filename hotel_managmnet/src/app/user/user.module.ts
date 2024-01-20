@@ -5,11 +5,13 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserLandingComponent } from './user-landing/user-landing.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { UserSuccessComponent } from './user-success/user-success.component';
 
 
 @NgModule({
   declarations: [
-    UserLandingComponent
+    UserLandingComponent,
+    UserSuccessComponent
   ],
   imports: [
     CommonModule,
