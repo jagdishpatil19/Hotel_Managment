@@ -11,6 +11,18 @@
       "confirmPassword": "admin",
       "Tnc": "yes",
       "id": 1
+    },
+    {
+      "name": "admin 2",
+      "mobileNo": "1234567890",
+      "panNo": "ZXCVB7890G",
+      "email": "admin2@gmail.com",
+      "city": "Satara",
+      "gender": "Female",
+      "password": "admin2",
+      "confirmPassword": "admin2",
+      "Tnc": "no",
+      "id": 2
     }
   ],
   "owner": [
@@ -25,6 +37,18 @@
       "confirmPassword": "owner",
       "Tnc": "no",
       "id": 1
+    },
+    {
+      "name": "owner 2",
+      "mobileNo": "0976286722",
+      "panNo": "MNBVC8797H",
+      "email": "owner2@gmail.com",
+      "city": "Satara",
+      "gender": "Male",
+      "password": "owner2",
+      "confirmPassword": "owner2",
+      "Tnc": "yes",
+      "id": 2
     }
   ],
   "user": [
@@ -39,6 +63,18 @@
       "confirmPassword": "user",
       "Tnc": "yes",
       "id": 1
+    },
+    {
+      "name": "user 2",
+      "mobileNo": "1234567899",
+      "panNo": "ASDFG7648G",
+      "email": "user2@gmail.com",
+      "city": "Sangli",
+      "gender": "Male",
+      "password": "user2",
+      "confirmPassword": "user2",
+      "Tnc": "yes",
+      "id": 2
     }
   ],
   "hotelDetails": [],
