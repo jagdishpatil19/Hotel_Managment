@@ -1,0 +1,7 @@
+.btns{
+   position: relative;
+   top: 20px;
+   display:grid;
+   justify-content: center; 
+   gap: 10px;
+}

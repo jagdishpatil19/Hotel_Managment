@@ -9,7 +9,7 @@
       "gender": "Male",
       "password": "admin",
       "confirmPassword": "admin",
-      "Tnc": "yes",
+      "Tnc": true,
       "id": 1
     },
     {
@@ -21,7 +21,7 @@
       "gender": "Female",
       "password": "admin2",
       "confirmPassword": "admin2",
-      "Tnc": "no",
+      "Tnc":true,
       "id": 2
     }
   ],
@@ -35,7 +35,7 @@
       "gender": "Male",
       "password": "owner",
       "confirmPassword": "owner",
-      "Tnc": "no",
+      "Tnc": true,
       "id": 1
     },
     {
@@ -47,8 +47,20 @@
       "gender": "Male",
       "password": "owner2",
       "confirmPassword": "owner2",
-      "Tnc": "yes",
+      "Tnc":true,
       "id": 2
+    },
+    {
+      "name": "owner3",
+      "mobileNo": "1311233666",
+      "panNo": "ABYTG7688J",
+      "email": "owner3@gmail.com",
+      "city": "Mumbai",
+      "gender": "Male",
+      "password": "owner3",
+      "confirmPassword": "owner3",
+      "Tnc":true,
+      "id": 3
     }
   ],
   "user": [
@@ -61,7 +73,7 @@
       "gender": "Female",
       "password": "user",
       "confirmPassword": "user",
-      "Tnc": "yes",
+      "Tnc": true,
       "id": 1
     },
     {
@@ -73,7 +85,7 @@
       "gender": "Male",
       "password": "user2",
       "confirmPassword": "user2",
-      "Tnc": "yes",
+      "Tnc":true,
       "id": 2
     }
   ],

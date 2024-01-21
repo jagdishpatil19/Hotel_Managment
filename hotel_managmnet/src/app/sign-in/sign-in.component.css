@@ -21,6 +21,7 @@ body{
     background-color: hsl(240, 83%, 9%);
     overflow: hidden;
 border-radius: 50px 0px;
+ border:2px solid rgb(255, 255, 255);
 box-shadow: -10px 10px 30px rgb(255, 255, 255);
 
 }
@@ -87,12 +88,12 @@ input {
     height: 35px;
     width: 250px;
     border: 1px solid  rgb(11, 195, 232);
-    background-color: transparent;
+    background-color:rgb(0, 234, 255);
     border-radius: 20px;
     font-weight: 600;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
-    color:  rgb(11, 195, 232);
+    /* color:  rgb(11, 195, 232); */
 }
 .forget-password{
     text-decoration: none;
@@ -115,12 +116,12 @@ input:focus{
     color: black;
 }
  
- .submit:hover{
+ /* .submit:hover{
     background-color: rgb(0, 255, 255);
     color: black;
     
     
- }
+ } */
  
  a:active{
     color: red;

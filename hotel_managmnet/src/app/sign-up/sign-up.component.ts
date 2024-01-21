@@ -30,7 +30,7 @@ export class SignUpComponent {
       gender: ['',[Validators.required]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
-      Tnc: [''],
+      Tnc: ['' ,[Validators.required]],
     });
   }
 
