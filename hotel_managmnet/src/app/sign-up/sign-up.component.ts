@@ -11,15 +11,17 @@ import { Router } from '@angular/router';
 export class SignUpComponent {
   constructor(private formBuilder: FormBuilder ,private apiCallService:ApiCallService,private router:Router) {}
   signUpForm!: FormGroup;
-
+  endPoint:any=''
   ngOnInit() {
     this.formLoad();
+    this.endPoint=this.apiCallService.journey
   }
   formLoad() {
     this.signUpForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       mobileNo: ['',[
           Validators.required,
+          Validators.pattern('^[0-9]{10}$'),
           Validators.maxLength(10),
           Validators.minLength(10),
         ],

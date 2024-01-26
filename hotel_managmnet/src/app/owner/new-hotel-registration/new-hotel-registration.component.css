@@ -1,0 +1,30 @@
+
+.formBox h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 70px;
+    left: 25px;
+    font-family:  Geneva ;
+}
+.formBox{
+    width: 350px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  left: 100px;
+padding: 100px;
+/* border: 1px solid black; */
+box-shadow: 10px 10px 70px black;
+}
+
+.input{
+    width: 350px;
+    margin-top:-10px;
+    box-shadow: 5px 0px 20px rgb(0, 0, 0);
+}
+.submitbtn{
+    width: 350px;
+    box-shadow: 10px 0px 60px rgb(0, 0, 0);
+    margin-top: -10px;
+    
+}

@@ -2,7 +2,7 @@
 <body>
   
     <div class="main-box">
-        <form #signInForm="ngForm" (ngSubmit)="submit(signInForm.value)">
+        <form #signInForm="ngForm" (ngSubmit)="submit()">
          <h2>Sign-In</h2>
         <br><br>
         <input type="text"  placeholder=" Username" name="userName" #user="ngModel" (input)="getUserNameValue(user.value)" ngModel required><br>
@@ -13,7 +13,9 @@
         <i style="position:relative; left: 320px; bottom: 28px;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </i>
-         <span *ngIf="pass.invalid&&pass.touched">Enter your correct password</span><br><br><br>
+         <span *ngIf="pass.invalid&&pass.touched">Enter your  password</span><br>
+         <span *ngIf="loginWrongError">Username and Password are not match</span>
+         <br><br><br>
     <button   class="submit" [disabled]="signInForm.invalid" >LogIn</button>
      
     <br><br>
@@ -24,6 +26,8 @@
  
      </div>
       
+
+     <h1 *ngFor="let data of getApiData">{{data.name}}</h1>
 </body>
  
 

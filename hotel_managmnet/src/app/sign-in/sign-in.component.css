@@ -15,7 +15,7 @@ body{
     color: aliceblue;
 }
 .main-box{
-    position:relative;left: 450px; top: 100px;
+    position:relative;left:400px; top: 100px;
     height: 450px;
     width: 400px;
     background-color: hsl(240, 83%, 9%);

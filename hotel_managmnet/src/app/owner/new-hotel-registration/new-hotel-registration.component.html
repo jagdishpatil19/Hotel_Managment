@@ -1,0 +1,100 @@
+<div class="formBox">
+  <h1>New Hotel Registration</h1>
+  <form [formGroup]="hotelRegistration" (ngSubmit)="submit()" >
+    <mat-form-field appearance="fill" class="input">
+      <mat-label> Owner Name</mat-label>
+      <input   matInput placeholder="Owner Name"  formControlName="ownerName" />
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+    <!-- <mat-error>this is njote fild</mat-error> -->
+    <br />
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Enter Your Number</mat-label>
+      <input  matInput placeholder="Enter Your Number" formControlName="ownerMobNo" required pattern="[0-9]{10}" />
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+    <mat-error *ngIf="hotelRegistration.get('ownerMobNo')?.hasError('minlength')">please enter 10 digit Mob No</mat-error>
+    <mat-error *ngIf="hotelRegistration.get('ownerMobNo')?.hasError('maxlength')">please enter 10 digit Mob No</mat-error>
+    <br />
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Enter Hotel Name</mat-label>
+      <input matInput placeholder="Enter Hotel Name" formControlName="hotelName" />
+      <mat-icon matSuffix>home</mat-icon>
+    </mat-form-field>
+  
+    <br>
+    <mat-form-field class="input">
+      <mat-label>State</mat-label>
+      <mat-select formControlName="state">
+        <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
+        <mat-option value="Rajasthan">Rajasthan</mat-option>
+        <mat-option value="Madhya Pradesh">Madhya Pradesh</mat-option>
+        <mat-option value="Maharashtra">Maharashtra</mat-option>
+        <mat-option value="Uttar Pradesh">Uttar Pradesh</mat-option>
+        <mat-option value="Gujarat">Gujarat</mat-option>
+        <mat-option value="Karnataka">Karnataka</mat-option>
+        <mat-option value="Andhra Pradesh">Andhra Pradesh</mat-option>
+        <mat-option value="Odisha">Odisha</mat-option>
+        <mat-option value="Chhattisgarh">Chhattisgarh</mat-option>
+        <mat-option value="Tamil Nadu">Tamil Nadu</mat-option>
+        <mat-option value="Telangana">Telangana</mat-option>
+        <mat-option value="Bihar">Bihar</mat-option>
+        <mat-option value="West Bengal">West Bengal</mat-option>
+        <mat-option value="Arunachal Pradesh">Arunachal Pradesh</mat-option>
+        <mat-option value="Jharkhand">Jharkhand</mat-option>
+        <mat-option value="Assam">Assam</mat-option>
+        <mat-option value="Himachal Pradesh">Himachal Pradesh</mat-option>
+        <mat-option value="Uttarakhand">Uttarakhand</mat-option>
+        <mat-option value="Punjab">Punjab</mat-option>
+        <mat-option value="Haryana">Haryana</mat-option>
+        <mat-option value="Kerala">Kerala</mat-option>
+        <mat-option value="Meghalaya">Meghalaya</mat-option>
+        <mat-option value="Manipur">Manipur</mat-option>
+        <mat-option value="Mizoram">Mizoram</mat-option>
+        <mat-option value="Nagaland">Nagaland</mat-option>
+        <mat-option value="Tripura">Tripura</mat-option>
+        <mat-option value="Sikkim">Sikkim</mat-option>
+        <mat-option value="Goa">Goa</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" class="input">
+      <mat-label>City</mat-label> 
+      <input matInput placeholder="Ex. San Francisco" formControlName="city"/>
+    </mat-form-field>
+
+          <mat-form-field class="example-full-width" class="input">
+            <mat-label>PIN Code</mat-label>
+            <input matInput #postalCode maxlength="6" placeholder="Ex.894105" value="94043" formControlName="pinCode"/>
+          </mat-form-field>
+         
+    <br />
+    <mat-form-field class="input">
+      <mat-label>Hotel Menu</mat-label>
+      <mat-select formControlName="hotelMenu">
+        <mat-option value="Veg"> Veg</mat-option>
+        <mat-option value="Non-Veg">Non-Veg</mat-option>
+        <mat-option value="veg & Non-Veg">Veg & Non-Veg</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Enter Hotel Mob Number</mat-label>
+      <input matInput placeholder="Enter Hotel Mob  Number" formControlName="hotelMobNo" required pattern="[0-9]{10}"  />
+      <mat-icon matSuffix>settings_phone</mat-icon>
+    </mat-form-field>
+    <mat-error *ngIf="hotelRegistration.get('hotelMobNo')?.hasError('minlength')">please enter 10 digit Mob No</mat-error>
+    <mat-error *ngIf="hotelRegistration.get('hotelMobNo')?.hasError('maxlength')">please enter 10 digit Mob No</mat-error>
+  <br>
+  <mat-form-field class="input">
+    <mat-label>Rooms Availble</mat-label>
+    <mat-select formControlName="roomsAvailable">
+      <mat-option value="yes"> Yes</mat-option>
+      <mat-option value="no">No</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <button  class="submitbtn" mat-raised-button style="background-color: aquamarine;" [disabled]="hotelRegistration.invalid">Submit</button>
+  </form>
+  
+</div>

@@ -21,7 +21,7 @@
       "gender": "Female",
       "password": "admin2",
       "confirmPassword": "admin2",
-      "Tnc":true,
+      "Tnc": true,
       "id": 2
     }
   ],
@@ -47,7 +47,7 @@
       "gender": "Male",
       "password": "owner2",
       "confirmPassword": "owner2",
-      "Tnc":true,
+      "Tnc": true,
       "id": 2
     },
     {
@@ -59,7 +59,7 @@
       "gender": "Male",
       "password": "owner3",
       "confirmPassword": "owner3",
-      "Tnc":true,
+      "Tnc": true,
       "id": 3
     }
   ],
@@ -85,10 +85,47 @@
       "gender": "Male",
       "password": "user2",
       "confirmPassword": "user2",
-      "Tnc":true,
+      "Tnc": true,
       "id": 2
     }
   ],
-  "hotelDetails": [],
+  "hotelDetails": [
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "2356433566",
+      "hotelName": "sagar",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "243233",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "2133232333",
+      "roomsAvailable": "no",
+      "id": 1
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1122344545",
+      "hotelName": "vaibhav",
+      "state": "Maharashtra",
+      "city": "pune",
+      "pinCode": "244433",
+      "hotelMenu": "veg & Non-Veg",
+      "hotelMobNo": "1233233442",
+      "roomsAvailable": "yes",
+      "id": 2
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1232345666",
+      "hotelName": "morya",
+      "state": "Maharashtra",
+      "city": "sangli",
+      "pinCode": "292793",
+      "hotelMenu": "Veg",
+      "hotelMobNo": "2233233442",
+      "roomsAvailable": "yes",
+      "id": 3
+    }
+  ],
   "hotelBooking": []
 }

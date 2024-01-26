@@ -12,12 +12,25 @@ export class SignInComponent {
   backLanding() {
     this.router.navigateByUrl('landing');
   }
-  hide = true;
-  getUserApiData: any;
+  hide = true;                 //this is a type of input fild
+         
+  endPoint:any=''             // Admin,Owner,User
 
-  ngOnInit() {}
-  userNameValue: any = '';
-  passwordValue: any = '';
+  getApiData:any=''           // collect on API data
+  
+  loginWrongError=false
+  ngOnInit() {
+    this.endPoint= this.apiCall.journey
+    console.log(this.endPoint,'this is endPOint')
+     this.apiCall.getApilCall(this.endPoint).subscribe(res=>{
+       this.getApiData=res
+       console.log(this.getApiData)
+    })
+   
+  }
+  
+  userNameValue: any = '';           //input name value get 
+  passwordValue: any = '';            //input password Value get 
 
   getUserNameValue(userValue: any) {
     this.userNameValue = userValue;
@@ -26,10 +39,29 @@ export class SignInComponent {
     this.passwordValue = passValue;
   }
 
-  async submit(formData:any) {
-    console.log(formData);
-    this.getUserApiData = await this.apiCall.getApilCall(formData).toPromise();
-    console.log(this.getUserApiData);
+
+  loginDataGet:string[]=[]
+  submit() {        
+    this.getApiData.find((ele:any)=>{
+     if(ele.name==this.userNameValue&&ele.password==this.passwordValue){
+      console.log("this login form")
+      this.loginDataGet.push(ele)
+    
+     }
+     
+     else if(this.loginDataGet.length>0){
+      this.router.navigateByUrl(this.endPoint+'/'+this.endPoint+'Success')
+     }
+     else if (this.loginDataGet.length==0){
+       this.loginWrongError=true
+     }
+      
+     else{
+      this.loginWrongError=false
+     }
+    })
+    
   }
  
+  
 }
