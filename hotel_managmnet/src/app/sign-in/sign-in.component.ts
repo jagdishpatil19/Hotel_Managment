@@ -14,14 +14,13 @@ export class SignInComponent {
   }
   hide = true;                 //this is a type of input fild
          
-  endPoint:any=''             // Admin,Owner,User
+  endPoint:any='hotelDetails'             // Admin,Owner,User
 
-  getApiData:any=''           // collect on API data
+  getApiData:any=''            // collect on API data  /owner/admin/user
   
   loginWrongError=false
   ngOnInit() {
     this.endPoint= this.apiCall.journey
-    console.log(this.endPoint,'this is endPOint')
      this.apiCall.getApilCall(this.endPoint).subscribe(res=>{
        this.getApiData=res
        console.log(this.getApiData)
@@ -39,19 +38,21 @@ export class SignInComponent {
     this.passwordValue = passValue;
   }
 
-
+   
+  
   loginDataGet:string[]=[]
   submit() {        
     this.getApiData.find((ele:any)=>{
      if(ele.name==this.userNameValue&&ele.password==this.passwordValue){
       console.log("this login form")
       this.loginDataGet.push(ele)
-    
-     }
-     
-     else if(this.loginDataGet.length>0){
+      this.apiCall.logiData=this.loginDataGet
       this.router.navigateByUrl(this.endPoint+'/'+this.endPoint+'Success')
      }
+     
+    //  else if(this.loginDataGet.length>0){
+    //   this.router.navigateByUrl(this.endPoint+'/'+this.endPoint+'Success')
+    //  }
      else if (this.loginDataGet.length==0){
        this.loginWrongError=true
      }

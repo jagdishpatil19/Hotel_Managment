@@ -1,1 +1,28 @@
- 
+<body>
+    
+<div class="tableBox">
+   
+   <h1>My Hotel List</h1>
+   <table>
+      <tr>
+       <!-- <th>Name</th>
+       <th>Mobile No</th> -->
+       <th>HotelName</th>
+       <th>State</th>
+       <th>City</th>
+       <th>Hotel Menu</th>
+       <th>RoomAvailble</th>
+      </tr>
+      <tr *ngFor="let data of myHotelList">
+         <td >{{data.hotelName | titlecase}} </td>
+         <td >{{data.state | titlecase}} </td>
+         <td >{{data.city | titlecase}} </td>
+         <td >{{data.hotelMenu | titlecase}} </td>
+         <td >{{data.roomsAvailable | titlecase}} </td>
+          
+      </tr>
+   </table>
+    
+</div>
+    
+</body>

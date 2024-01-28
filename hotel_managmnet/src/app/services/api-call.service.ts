@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiCallService {
   journey: any;
-
+  logiData:any=[]
   constructor(private httpClient:HttpClient) { }
   userUrl="http://localhost:3000"
 

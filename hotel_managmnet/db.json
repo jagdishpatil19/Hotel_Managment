@@ -61,6 +61,18 @@
       "confirmPassword": "owner3",
       "Tnc": true,
       "id": 3
+    },
+    {
+      "name": "jagdish",
+      "mobileNo": "1234567890",
+      "panNo": "AWDRE2454K",
+      "email": "jagdis@gmail.com",
+      "city": "Kolhapur",
+      "gender": "Male",
+      "password": "jagdish",
+      "confirmPassword": "jagdish",
+      "Tnc": true,
+      "id": 4
     }
   ],
   "user": [
@@ -92,37 +104,37 @@
   "hotelDetails": [
     {
       "ownerName": "jagdish",
-      "ownerMobNo": "2356433566",
+      "ownerMobNo": "1234567890",
       "hotelName": "sagar",
       "state": "Maharashtra",
       "city": "kolhapur",
-      "pinCode": "243233",
+      "pinCode": "416597",
       "hotelMenu": "Non-Veg",
-      "hotelMobNo": "2133232333",
-      "roomsAvailable": "no",
+      "hotelMobNo": "0987654321",
+      "roomsAvailable": "yes",
       "id": 1
     },
     {
       "ownerName": "jagdish",
-      "ownerMobNo": "1122344545",
-      "hotelName": "vaibhav",
+      "ownerMobNo": "1234567890",
+      "hotelName": "7/12",
       "state": "Maharashtra",
-      "city": "pune",
-      "pinCode": "244433",
+      "city": "kolhapur",
+      "pinCode": "343345",
       "hotelMenu": "veg & Non-Veg",
-      "hotelMobNo": "1233233442",
-      "roomsAvailable": "yes",
+      "hotelMobNo": "0987654432",
+      "roomsAvailable": "no",
       "id": 2
     },
     {
       "ownerName": "jagdish",
-      "ownerMobNo": "1232345666",
-      "hotelName": "morya",
+      "ownerMobNo": "1234567890",
+      "hotelName": "taj",
       "state": "Maharashtra",
-      "city": "sangli",
-      "pinCode": "292793",
-      "hotelMenu": "Veg",
-      "hotelMobNo": "2233233442",
+      "city": "mumbai",
+      "pinCode": "343222",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "2333222443",
       "roomsAvailable": "yes",
       "id": 3
     }
