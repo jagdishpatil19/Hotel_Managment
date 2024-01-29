@@ -1,9 +1,14 @@
- 
+body{
+    background-image: url('src/assets/landing image.jpg');
+    background-size:cover;
+} 
+
 .allButtons{
     position: relative;
-    top: 70px;
+    top: 60px;
     left: 420px;
-    
+     display: flex;
+     gap: 5px;
 }
 .allButtons button{
     height:60px;

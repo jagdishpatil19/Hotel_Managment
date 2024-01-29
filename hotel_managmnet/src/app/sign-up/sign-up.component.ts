@@ -41,7 +41,8 @@ export class SignUpComponent {
     let journey=this.apiCallService.journey
      this.result=await this.apiCallService.postApiCall(this.signUpForm.value).toPromise()
     if(this.result?.id){
-     this.router.navigateByUrl(journey+'/'+journey+'Success')
+    //  this.router.navigateByUrl(journey+'/'+journey+'Success')
+    this.router.navigateByUrl('signIn')
     }
   }
 

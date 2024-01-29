@@ -2,24 +2,38 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiCallService {
   journey: any;
-  logiData:any=[]
-  constructor(private httpClient:HttpClient) { }
-  userUrl="http://localhost:3000"
+  logiData: any = [];
+  dataByIdGet: any;
+  deletById: any;
+  constructor(private httpClient: HttpClient) {}
+  userUrl = 'http://localhost:3000';
 
-  getApilCall(endPoint:any){
-    let url=this.userUrl+'/'+endPoint
-     return this.httpClient.get(url)
+  getApilCall(endPoint: any, id?: any) {
+    let url = id
+      ? this.userUrl + '/' + endPoint + '/' + id
+      : this.userUrl + '/' + endPoint;
+    return this.httpClient.get(url);
   }
-  postApiCall(signUpData:any){
-    let url=this.userUrl+'/'+this.journey
-    return this.httpClient.post(url,signUpData)
+  postApiCall(signUpData: any) {
+    let url = this.userUrl + '/' + this.journey;
+    return this.httpClient.post(url, signUpData);
   }
-  hotelRegisterPostApi(endPoint:any ,hotelRegData:any){
-    let url=this.userUrl+'/'+endPoint
-    return this.httpClient.post(url,hotelRegData)
+
+  patchApiCall(endPoint: any, id: any, updateData: any) {
+    let url = this.userUrl + '/' + endPoint + '/' + id;
+    return this.httpClient.patch(url, updateData);
+  }
+
+  deletApiCall(endPoint: any, id: any) {
+    let url = this.userUrl + '/' + endPoint + '/' + id;
+    return this.httpClient.delete(url);
+  }
+  hotelRegisterPostApi(endPoint: any, hotelRegData: any) {
+    let url = this.userUrl + '/' + endPoint;
+    return this.httpClient.post(url, hotelRegData);
   }
 }

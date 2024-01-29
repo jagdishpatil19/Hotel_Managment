@@ -1,1 +1,12 @@
- 
+ body{
+    background-image: url('src/assets/signin image.jpg');
+    background-size: cover;
+ }
+
+ .btn{
+    position: relative;
+    top:10px;
+    left: 10px;
+     display: flex;
+     gap: 5px;
+ }

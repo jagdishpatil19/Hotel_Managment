@@ -1,20 +1,50 @@
-
-.formBox h1 {
+ body{
+    background-image: url('src/assets/hotel image2.jpg');
+    background-size: cover;
+    
+ }
+ 
+ .heading{
+    height: 100px;
+    width: 550px;
+    position: relative;
+    top: 20px;
+     left: 350px ;
+  background-color:transparent;
+  
+ 
+/* border: 1px solid black; */
+box-shadow: 10px 10px 70px black;
+ }
+  h1 {
     font-size: 30px;
     font-weight: bolder;
-    position: relative;
-    bottom: 70px;
+    display: flex;
+    justify-content: center;
+      position:relative; top: 30px;
+      right: 10px;
+       
     left: 25px;
     font-family:  Geneva ;
+   
 }
 .formBox{
     width: 350px;
-  background-color: rgb(255, 255, 255);
+    height: 420px;
+    background-color:transparent;
+     backdrop-filter:blur(2px);
   position: relative;
-  left: 100px;
-padding: 100px;
+  left: 350px;
+  top: 20px;
+padding-left:100px;
+padding-right: 100px;
+padding-top: 20px;
+padding-bottom: 30px;
+ 
 /* border: 1px solid black; */
 box-shadow: 10px 10px 70px black;
+overflow:auto;
+ 
 }
 
 .input{
