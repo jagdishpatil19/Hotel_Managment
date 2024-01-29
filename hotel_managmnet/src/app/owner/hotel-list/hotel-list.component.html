@@ -24,16 +24,16 @@
          <td >{{data.city | titlecase}} </td>
          <td >{{data.hotelMenu | titlecase}} </td>
          <td >{{data.roomsAvailable | titlecase}} </td>
-          <td matTooltip="edit"
-          matTooltipClass="example-tooltip-uppercase"
-          aria-label="Button that shows a red tooltip"
-          class="example-button"><mat-icon (click)="edit(data.id)">edit</mat-icon></td>
+          <td ><mat-icon matTooltip="edit"
+            matTooltipClass="example-tooltip-uppercase"
+            aria-label="Button that shows a red tooltip"
+            class="example-button" (click)="edit(data.id)">edit</mat-icon></td>
           
           
-          <td  matTooltip="delete"
-          matTooltipClass="example-tooltip-uppercase"
-          aria-label="Button that shows a red tooltip"
-          class="example-button"><mat-icon (click)="delet(data.id)">delete</mat-icon></td>
+          <td><mat-icon  matTooltip="delete"
+            matTooltipClass="example-tooltip-uppercase"
+            aria-label="Button that shows a red tooltip"
+            class="example-button" (click)="delet(data.id)">delete</mat-icon></td>
       </tr>
    </table>
     
