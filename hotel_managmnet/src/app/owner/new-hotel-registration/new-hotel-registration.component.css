@@ -1,15 +1,16 @@
  body{
     background-image: url('src/assets/hotel image2.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     
  }
  
  .heading{
     height: 100px;
-    width: 550px;
+    width: 600px;
     position: relative;
     top: 20px;
-     left: 350px ;
+     margin: auto;
   background-color:transparent;
   
  
@@ -29,13 +30,13 @@ box-shadow: 10px 10px 70px black;
    
 }
 .formBox{
-    width: 350px;
-    height: 420px;
+    width: 400px;
+    height: 550px;
     background-color:transparent;
      backdrop-filter:blur(2px);
   position: relative;
-  left: 350px;
   top: 20px;
+  margin: auto;
 padding-left:100px;
 padding-right: 100px;
 padding-top: 20px;
@@ -48,12 +49,12 @@ overflow:auto;
 }
 
 .input{
-    width: 350px;
-    margin-top:-10px;
+    width: 400px;
+    margin-top:-8px;
     box-shadow: 5px 0px 20px rgb(0, 0, 0);
 }
 .submitbtn{
-    width: 350px;
+    width: 400px;
     box-shadow: 10px 0px 60px rgb(0, 0, 0);
     margin-top: -10px;
     

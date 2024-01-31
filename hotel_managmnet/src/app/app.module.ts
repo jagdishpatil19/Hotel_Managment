@@ -10,13 +10,16 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+ 
+ 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+     
   ],
   imports: [
     BrowserModule,

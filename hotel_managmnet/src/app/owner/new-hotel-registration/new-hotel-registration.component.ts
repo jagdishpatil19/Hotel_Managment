@@ -22,8 +22,8 @@ export class NewHotelRegistrationComponent {
     this.formLoad();
     this.dataById = this.apiCall.dataByIdGet;
     console.log(this.dataById, 'this is data by id');
-    console.log('this is regs in data ',this.dataById ? this.dataById?.ownerName : 'hhhh');
-    console.log('this is regs in data ',this.dataById ? this.dataById?.ownerMobNo : 'hhhh222');
+    // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerName : 'hhhh');
+    // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerMobNo : 'hhhh222');
   }
   formLoad() {
     this.hotelRegistration = this.formBuilder.group({

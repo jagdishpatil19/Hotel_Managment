@@ -9,13 +9,14 @@ import { ApiCallService } from 'src/app/services/api-call.service';
   styleUrls: ['./hotel-list.component.css']
 })
 export class HotelListComponent {
+  deletHotelName: any;
 
 constructor(private apiCall:ApiCallService,private router:Router){}
 endPoint:any='hotelDetails'
 hotelRegistraionData:any=[]  //new hotel registraion all data put here
 loginData:any;      //login data put
 myHotelList:any[]=[] 
-dataById:any;
+dataById:any;             
 tableShow:boolean=false
 ngOnInit(){
 this.getHotelRegData()   
@@ -59,8 +60,9 @@ this.apiCall.logiData.forEach((ele:any) => {
 
  async edit(id:any){
   this.apiCall.dataByIdGet=await this.apiCall.getApilCall(this.endPoint,id).toPromise()
-  this.router.navigateByUrl('owner/newHotelRegistration')
   this.dataById=this.apiCall.dataByIdGet
+  this.router.navigateByUrl('owner/newHotelRegistration')
+  // console.log(this.dataById)
    
  }
   
@@ -73,15 +75,23 @@ cancle(){
   this.deletBox=false
 }
 
-delet(id:any){
+delet(id:any ,hotelName:any){
    this.apiCall.deletById=id
    this.deletId=this.apiCall.deletById
     console.log(this.deletId ,'this is delet id')
     this.deletBox=true
+    this.deletHotelName=hotelName
 }
  async confirmDelet(){
   await this.apiCall.deletApiCall(this.endPoint,this.deletId).toPromise()
   this.deletBox=false
+
+  
+  //delet keleli data remove karun new refresh karnyasathi parat ekda get karun gyaych
+  this.apiCall.getApilCall(this.endPoint).subscribe(res=>{
+    this.hotelRegistraionData=res
+  })
+  
 
 this.router.navigateByUrl('owner/ownerSuccess')  
  

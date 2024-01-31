@@ -1,4 +1,58 @@
-<p>admin-success works!</p>
+<button mat-raised-button (click)="logOut()"><b> Log-Out</b></button>
+<button mat-raised-button (click)="showList()"><b> Hotel List</b> </button>
 
 
- 
+
+<!-- table create -->
+<div class="mainDiv"  *ngIf="tableDataShowHide">
+ <div class="search">
+    <input type="search" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
+ </div>
+<div class="table" *ngIf="tableShow" >
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Mobile No</th>
+            <th>HotelName</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Hotel Menu</th>
+            <th>RoomAvailble</th>
+            <th>Delete</th>
+           </tr>
+           <tr *ngFor="let data of hotelList |search:searchData">
+     
+              <td >{{data.ownerName | titlecase}} </td>
+              <td >{{data.ownerMobNo | titlecase}} </td>
+              <td >{{data.hotelName | titlecase}} </td>
+              <td >{{data.state | titlecase}} </td>
+              <td >{{data.city | titlecase}} </td>
+              <td >{{data.hotelMenu | titlecase}} </td>
+              <td >{{data.roomsAvailable | titlecase}} </td>
+
+               <td><mat-icon  matTooltip="delete"
+                 matTooltipClass="example-tooltip-uppercase"
+                 aria-label="Button that shows a red tooltip"
+                 class="example-button" (click)="delet(data.hotelName ,data.id)" >delete</mat-icon></td>
+           </tr>
+    </table>
+</div>
+</div>
+<div class="deleteBox" *ngIf="deletBox">
+    <h1 mat-dialog-title>Delete file</h1>
+    <div mat-dialog-content>
+      Would you like to delete <b>{{deletHotelName}} Hotel </b> ?
+    </div>
+    <br>
+    <div class="delBtn">
+      <button (click)="cancle()">Cancle</button>
+      <button (click)="confirmDelet()" >Yes</button>
+    </div>
+    
+    </div> 
+
+    <!-- deleted success massage -->
+    <div class="deleted" *ngIf="deletSuccsess" >
+        <b>Deleted</b>
+    </div>

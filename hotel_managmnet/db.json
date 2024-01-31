@@ -137,6 +137,30 @@
       "hotelMobNo": "2333222443",
       "roomsAvailable": "yes",
       "id": 3
+    },
+    {
+      "ownerName": "shri",
+      "ownerMobNo": "1111111111",
+      "hotelName": "shejal",
+      "state": "Maharashtra",
+      "city": "pune",
+      "pinCode": "232223",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "2233222321",
+      "roomsAvailable": "yes",
+      "id": 4
+    },
+    {
+      "ownerName": "shri",
+      "ownerMobNo": "1111111111",
+      "hotelName": "Ajinkya Garden",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "232223",
+      "hotelMenu": "veg & Non-Veg",
+      "hotelMobNo": "1222211111",
+      "roomsAvailable": "yes",
+      "id": 5
     }
   ],
   "hotelBooking": []

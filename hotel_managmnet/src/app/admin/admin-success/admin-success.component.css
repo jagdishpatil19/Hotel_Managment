@@ -1,0 +1,81 @@
+ 
+ 
+.search span{
+    position: absolute;
+    top: 50px;
+    left: 62%;
+    scale: 1.3;
+}
+.search input{
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    scale: 2;
+    width: 200px;
+    box-shadow: 0px 8px 20px black;
+    border: 1px solid black;
+
+}
+.table{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    width: auto;
+     overflow: auto;
+     
+    
+}
+table{
+    border-collapse: collapse;
+    background-color: aquamarine;
+    box-shadow: 0px 8px 40px black;
+}
+
+tr,th ,td{
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 18px;
+     
+}
+
+
+/* delet box style */
+.deleteBox{
+    background-color: rgb(220, 220, 220);
+    width: 250px;
+     position:absolute;
+     top:50px;
+     left: 1000px;
+     padding: 10px;
+     border: 2px solid black;
+     box-shadow: 0px 10px 40px black;
+     border-radius: 10px;
+}
+.delBtn{
+    display: flex;
+    justify-content: space-around;
+    gap: 140px;
+}
+.delBtn button:hover{
+    background-color: aqua;
+    border: 1px solid black;
+    }
+
+
+    /* deleted suuces massage show box */
+
+.deleted{
+    background-color: rgba(209, 143, 143, 0.82);
+    width: 200px;
+    height:20px;
+    font-size: 28px;
+     padding: 30px;
+     padding-left: 100px;
+     border-radius: 60px;
+     box-shadow: 5px 10px 20px black;
+     position: absolute;
+     left: 75%;
+  top: 30px;
+     
+}
