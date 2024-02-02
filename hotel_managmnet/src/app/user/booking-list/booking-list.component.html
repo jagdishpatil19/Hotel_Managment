@@ -1,0 +1,22 @@
+ <app-user-success></app-user-success>
+ <table>
+    <tr>
+        <th>Name</th>
+        <th>Mobile No</th>
+        <th>City</th>
+        <th>HotelName</th>
+        <th>Hotel Contact No</th>
+        
+ 
+        
+       </tr>
+       <tr *ngFor="let data of bookingList">
+ 
+          <td >{{data.userName | titlecase}} </td>
+          <td >{{data.mobileNumber | titlecase}} </td>
+          <td >{{data.city | titlecase}} </td>
+          <td >{{data.hotelName | titlecase}} </td>
+          <td >{{data.hotelContacNumber | titlecase}} </td>
+           
+       </tr>
+</table>

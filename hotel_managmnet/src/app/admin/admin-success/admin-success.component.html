@@ -1,6 +1,8 @@
-<button mat-raised-button (click)="logOut()"><b> Log-Out</b></button>
+<div class="btn">
+  <button mat-raised-button (click)="logOut()"><b> Log-Out</b></button>
 <button mat-raised-button (click)="showList()"><b> Hotel List</b> </button>
 
+</div>
 
 
 <!-- table create -->
@@ -21,7 +23,7 @@
             <th>RoomAvailble</th>
             <th>Delete</th>
            </tr>
-           <tr *ngFor="let data of hotelList |search:searchData">
+           <tr *ngFor="let data of hotelList">
      
               <td >{{data.ownerName | titlecase}} </td>
               <td >{{data.ownerMobNo | titlecase}} </td>

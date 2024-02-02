@@ -1,0 +1,42 @@
+<body>
+  <div class="formBox">
+   
+
+    <h1>Book Now</h1>
+<form [formGroup]="bookingForm"  >
+    <mat-form-field appearance="fill" class="input">
+        <mat-label>Enter Your Name</mat-label>
+        <input matInput placeholder="enter your name" formControlName="userName">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+         
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" class="input">
+        <mat-label>Your Mob Number</mat-label>
+        <input   matInput placeholder="hotel Contac Number"   formControlName="mobileNumber" >
+        <mat-icon matSuffix>call</mat-icon>
+        <mat-error *ngIf="bookingForm.get('mobileNumber')?.hasError('maxlength') || bookingForm.get('mobileNumber')?.hasError('minlength')" >please enter 10 digit no</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill" class="input">
+        <mat-label> Your City Name</mat-label>
+        <input   matInput placeholder=" enter your Cict Name"   formControlName="city">
+        
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="input">
+        <mat-label>Hotel Name</mat-label>
+        <input style="text-transform: capitalize;" matInput placeholder="Enter Hotel Name"   formControlName="hotelName">
+        <mat-icon matSuffix>home</mat-icon>
+      </mat-form-field>
+      <br>
+    <mat-form-field appearance="fill" class="input">
+        <mat-label>Hotel Contact Number</mat-label>
+        <input   matInput placeholder="hotel Contac Number"   formControlName="hotelContacNumber">
+        <mat-icon matSuffix>call</mat-icon>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" class="bookBtn" [disabled]="bookingForm.invalid" (click)="submit()">Book</button>
+</form>
+  </div>
+</body>

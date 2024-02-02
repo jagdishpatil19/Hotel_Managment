@@ -12,7 +12,7 @@
     <!-- <mat-error>this is njote fild</mat-error> -->
     <br />
     <mat-form-field appearance="fill" class="input">
-      <mat-label>Enter Your Number</mat-label>
+      <mat-label> Your Number</mat-label>
       <input  matInput placeholder="Enter Your Number" formControlName="ownerMobNo" required pattern="[0-9]{10}" />
       <mat-icon matSuffix>phone</mat-icon>
     </mat-form-field>
@@ -20,7 +20,7 @@
     <mat-error *ngIf="hotelRegistration.get('ownerMobNo')?.hasError('maxlength')">please enter 10 digit Mob No</mat-error>
     <br />
     <mat-form-field appearance="fill" class="input">
-      <mat-label>Enter Hotel Name</mat-label>
+      <mat-label> Hotel Name</mat-label>
       <input matInput placeholder="Enter Hotel Name" formControlName="hotelName" />
       <mat-icon matSuffix>home</mat-icon>
     </mat-form-field>
@@ -82,7 +82,7 @@
     </mat-form-field>
     <br>
     <mat-form-field appearance="fill" class="input">
-      <mat-label>Enter Hotel Mob Number</mat-label>
+      <mat-label>  Hotel Mob Number</mat-label>
       <input matInput placeholder="Enter Hotel Mob  Number" formControlName="hotelMobNo" required pattern="[0-9]{10}"  />
       <mat-icon matSuffix>settings_phone</mat-icon>
     </mat-form-field>
@@ -96,7 +96,10 @@
       <mat-option value="no">No</mat-option>
     </mat-select>
   </mat-form-field>
-  
+  <br>
+  <input type="file" class="input" formControlName="imageName">
+  <br>
+  <br>
   <button  class="submitbtn" mat-raised-button style="background-color: aquamarine;" [disabled]="hotelRegistration.invalid" *ngIf="!dataById" (click)="submit()" >Submit</button>
   <button  class="submitbtn" mat-raised-button style="background-color: aquamarine;" [disabled]="hotelRegistration.invalid" *ngIf="dataById" (click)="update()">Update</button>
   </form>

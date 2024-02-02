@@ -19,11 +19,12 @@ export class NewHotelRegistrationComponent {
   dataById: any; // editing data save
 
   ngOnInit() {
-    this.formLoad();
+   
     this.dataById = this.apiCall.dataByIdGet;
     console.log(this.dataById, 'this is data by id');
     // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerName : 'hhhh');
     // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerMobNo : 'hhhh222');
+     this.formLoad();
   }
   formLoad() {
     this.hotelRegistration = this.formBuilder.group({
@@ -56,5 +57,6 @@ export class NewHotelRegistrationComponent {
   async update() {
     await this.apiCall.patchApiCall(this.endPoint,this.dataById?.id,this.hotelRegistration.value ).toPromise();
     console.log(this.hotelRegistration.value);
+    this.router.navigateByUrl('owner/ownerSuccess');
   }
 }

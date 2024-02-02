@@ -6,18 +6,26 @@ import { UserLandingComponent } from './user-landing/user-landing.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { UserSuccessComponent } from './user-success/user-success.component';
-
+import { SearchPipe } from '../pipes/search.pipe';
+import { BookingComponent } from './booking/booking.component';
+import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { BookingListComponent } from './booking-list/booking-list.component';
 
 @NgModule({
   declarations: [
     UserLandingComponent,
-    UserSuccessComponent
+    UserSuccessComponent,
+     SearchPipe,
+    BookingComponent,
+    HotelListComponent,
+    BookingListComponent
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    
   ]
 })
 export class UserModule { }

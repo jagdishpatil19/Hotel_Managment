@@ -161,7 +161,58 @@
       "hotelMobNo": "1222211111",
       "roomsAvailable": "yes",
       "id": 5
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1234567890",
+      "hotelName": "kinara",
+      "state": "Maharashtra",
+      "city": "pune",
+      "pinCode": "232232",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "1232321122",
+      "roomsAvailable": "yes",
+      "imageName": "C:\\fakepath\\hotel image2.jpg",
+      "id": 6
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1234567890",
+      "hotelName": "sssss",
+      "state": "Andhra Pradesh",
+      "city": "ssss",
+      "pinCode": "ssssss",
+      "hotelMenu": "veg & Non-Veg",
+      "hotelMobNo": "2222222222",
+      "roomsAvailable": "yes",
+      "imageName": "C:\\fakepath\\signin image.jpg",
+      "id": 7
     }
   ],
-  "hotelBooking": []
+  "hotelBooking": [
+    {
+      "userName": "user",
+      "mobileNumber": "1212121212",
+      "city": "pune",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "id": 1
+    },
+    {
+      "userName": "Amit",
+      "mobileNumber": "4334232322",
+      "city": "mumbai",
+      "hotelName": "7/12",
+      "hotelContacNumber": "0987654432",
+      "id": 2
+    },
+    {
+      "userName": "sham",
+      "mobileNumber": "2322232112",
+      "city": "kowad",
+      "hotelName": "shejal",
+      "hotelContacNumber": "2233222321",
+      "id": 3
+    }
+  ]
 }

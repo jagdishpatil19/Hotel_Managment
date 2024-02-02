@@ -1,0 +1,27 @@
+.table{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+    width: auto;
+     overflow: auto;
+     
+    
+}
+table{
+    border-collapse: collapse;
+    background-color: rgba(252, 96, 220, 0.895);
+    box-shadow: 0px 8px 40px black;
+}
+
+tr,th ,td{
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 18px;
+     
+}
+
+.search :placeholder-shown{
+    font-size: 12px;
+    padding-left: 10px;
+}

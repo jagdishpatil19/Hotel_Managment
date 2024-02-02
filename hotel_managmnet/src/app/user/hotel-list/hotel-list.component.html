@@ -1,0 +1,31 @@
+
+<app-user-success></app-user-success>
+<div class="mainDiv"  *ngIf="tableDataShowHide">
+    <div class="search">
+       <input type="text" placeholder="Search your hotel" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
+    </div>
+  <div class="table" *ngIf="tableShow" >
+  
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Mobile No</th>
+            <th>HotelName</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Hotel Menu</th>
+            <th>RoomAvailble</th>
+            
+           </tr>
+           <tr *ngFor="let data of hotelList |search:searchData">
+     
+              <td >{{data.ownerName | titlecase}} </td>
+              <td >{{data.ownerMobNo | titlecase}} </td>
+              <td >{{data.hotelName | titlecase}} </td>
+              <td >{{data.state | titlecase}} </td>
+              <td >{{data.city | titlecase}} </td>
+              <td >{{data.hotelMenu | titlecase}} </td>
+              <td >{{data.roomsAvailable | titlecase}} </td>
+              <td> <button mat-raised-button color="primary" (click)="booking(data.id)">Book Now</button></td>
+           </tr>
+    </table>

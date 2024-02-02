@@ -9,6 +9,7 @@ export class ApiCallService {
   logiData: any = [];
   dataByIdGet: any;
   deletById: any;
+  hotelBookData:any;
   constructor(private httpClient: HttpClient) {}
   userUrl = 'http://localhost:3000';
 
@@ -18,8 +19,8 @@ export class ApiCallService {
       : this.userUrl + '/' + endPoint;
     return this.httpClient.get(url);
   }
-  postApiCall(signUpData: any) {
-    let url = this.userUrl + '/' + this.journey;
+  postApiCall(signUpData: any ,booking?:any) {
+    let url = booking?  this.userUrl + '/' +booking :  this.userUrl + '/' + this.journey;
     return this.httpClient.post(url, signUpData);
   }
 

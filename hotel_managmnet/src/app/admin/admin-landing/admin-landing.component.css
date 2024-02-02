@@ -1,6 +1,12 @@
- .btn{
-    position: relative;
-    top: 10px;
-    display: flex;
-    gap: 5px;
- }
+body{
+   background-image: url('https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+   background-size: cover;
+}
+
+.btn{
+   position:absolute;
+   top: 30px;
+   left: 50px;
+   display: flex;
+   gap: 5px;
+}
