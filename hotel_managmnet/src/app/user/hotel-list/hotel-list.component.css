@@ -1,4 +1,7 @@
-
+body{
+     background-image: url('https://images.pexels.com/photos/2290753/pexels-photo-2290753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+     background-size: cover;
+    }
 .search span{
     position: absolute;
     top: 105px;
@@ -22,10 +25,11 @@ border-radius: 20px;
     display: flex;
     justify-content: center;
     position: relative;
-    top: 150px;
+    top: 120px;
     width: auto;
      overflow: auto;
-     
+     overflow: auto;
+     box-shadow: 5px 10px 30px black;
     
 }
 table{

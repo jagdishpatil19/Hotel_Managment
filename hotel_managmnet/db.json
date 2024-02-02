@@ -89,7 +89,7 @@
       "id": 1
     },
     {
-      "name": "user 2",
+      "name": "user2",
       "mobileNo": "1234567899",
       "panNo": "ASDFG7648G",
       "email": "user2@gmail.com",
@@ -193,26 +193,10 @@
     {
       "userName": "user",
       "mobileNumber": "1212121212",
-      "city": "pune",
-      "hotelName": "sagar",
-      "hotelContacNumber": "0987654321",
-      "id": 1
-    },
-    {
-      "userName": "Amit",
-      "mobileNumber": "4334232322",
-      "city": "mumbai",
+      "city": "kolhapur",
       "hotelName": "7/12",
       "hotelContacNumber": "0987654432",
-      "id": 2
-    },
-    {
-      "userName": "sham",
-      "mobileNumber": "2322232112",
-      "city": "kowad",
-      "hotelName": "shejal",
-      "hotelContacNumber": "2233222321",
-      "id": 3
+      "id": 1
     }
   ]
 }

@@ -10,8 +10,5 @@ import { ApiCallService } from 'src/app/services/api-call.service';
 export class UserSuccessComponent {
 
 
-//   upload(imagePath:any){
-// console.log(imagePath,'this is image path')
-//   }
 
 }

@@ -10,6 +10,8 @@ import { SearchPipe } from '../pipes/search.pipe';
 import { BookingComponent } from './booking/booking.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { BookingListComponent } from './booking-list/booking-list.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+ 
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BookingListComponent } from './booking-list/booking-list.component';
      SearchPipe,
     BookingComponent,
     HotelListComponent,
-    BookingListComponent
+    BookingListComponent,
+    UserNavbarComponent,
+    
   ],
   imports: [
     CommonModule,

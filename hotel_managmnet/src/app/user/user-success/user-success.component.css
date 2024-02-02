@@ -1,18 +1,4 @@
-.menuIcon{
-    position: relative; left:680px;
-}
-ul{
-    display: flex;
-    gap: 50px;
-    margin-left: 40px;
-}
-ul li{
-    list-style: none;
-}
-ul li a{
-    text-decoration: none;
-    color:rgb(247, 247, 247);
-}
-ul li a:hover{
-    color: aqua;
-}
+ body{
+    background-image: url('src/assets/hotel userSuccess image.jpg');
+    background-size: cover;
+ }

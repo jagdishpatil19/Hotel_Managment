@@ -1,5 +1,9 @@
+ 
+   <body>
+      
 
-<app-user-success></app-user-success>
+ 
+ <app-user-navbar></app-user-navbar>
 <div class="mainDiv"  *ngIf="tableDataShowHide">
     <div class="search">
        <input type="text" placeholder="Search your hotel" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
@@ -29,3 +33,6 @@
               <td> <button mat-raised-button color="primary" (click)="booking(data.id)">Book Now</button></td>
            </tr>
     </table>
+    </div>
+</div>
+</body>

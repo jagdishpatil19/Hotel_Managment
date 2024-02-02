@@ -54,7 +54,7 @@ else{
   delet(hotelName:any ,id:any) {
     this.deletBox=true
     this.deletHotelName=hotelName
-     this.deletToId=id
+     this.deletToId=id 
   }
   
    async confirmDelet() {

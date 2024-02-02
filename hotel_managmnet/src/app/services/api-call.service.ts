@@ -10,6 +10,7 @@ export class ApiCallService {
   dataByIdGet: any;
   deletById: any;
   hotelBookData:any;
+  deletByBookingId: any;
   constructor(private httpClient: HttpClient) {}
   userUrl = 'http://localhost:3000';
 

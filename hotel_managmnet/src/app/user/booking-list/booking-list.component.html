@@ -1,22 +1,44 @@
- <app-user-success></app-user-success>
- <table>
-    <tr>
-        <th>Name</th>
-        <th>Mobile No</th>
-        <th>City</th>
-        <th>HotelName</th>
-        <th>Hotel Contact No</th>
-        
- 
-        
-       </tr>
-       <tr *ngFor="let data of bookingList">
- 
-          <td >{{data.userName | titlecase}} </td>
-          <td >{{data.mobileNumber | titlecase}} </td>
-          <td >{{data.city | titlecase}} </td>
-          <td >{{data.hotelName | titlecase}} </td>
-          <td >{{data.hotelContacNumber | titlecase}} </td>
-           
-       </tr>
-</table>
+<body>
+   <app-user-navbar></app-user-navbar>
+   <table *ngIf="tableHide">
+      <tr>
+          <th>Name</th>
+          <th>Mobile No</th>
+          <th>City</th>
+          <th>HotelName</th>
+          <th>Hotel Contact No</th>
+          <th>Delete</th>
+          
+   
+          
+         </tr>
+         <tr *ngFor="let data of myBookingList">
+   
+            <td >{{data.userName | titlecase}} </td>
+            <td >{{data.mobileNumber | titlecase}} </td>
+            <td >{{data.city | titlecase}} </td>
+            <td >{{data.hotelName | titlecase}} </td>
+            <td >{{data.hotelContacNumber | titlecase}} </td>
+            <td><mat-icon  matTooltip="delete"
+               matTooltipClass="example-tooltip-uppercase"
+               aria-label="Button that shows a red tooltip"
+               class="example-button" (click)="delet(data.id,data.hotelName)">delete</mat-icon></td>
+         </tr>
+  </table>
+  <div class="deleteBox" *ngIf="deletBox">
+   <h1 mat-dialog-title>Delete file</h1>
+   <div mat-dialog-content>
+     Would you like to delete <b>{{deletHotelName}}  Hotel </b> ?
+   </div>
+   <br>
+   <div class="delBtn">
+     <button (click)="cancle()">Cancle</button>
+     <button (click)="confirmDelet()" >Yes</button>
+   </div>
+   
+   </div>
+   
+   <div class="error" *ngIf="error">
+      <h1>No booking</h1>
+   </div>
+</body>
