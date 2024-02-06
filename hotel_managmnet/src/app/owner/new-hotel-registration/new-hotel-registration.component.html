@@ -97,9 +97,10 @@
     </mat-select>
   </mat-form-field>
   <br>
-  <input type="file" class="input" formControlName="imageName">
-  <br>
-  <br>
+  
+  <!-- <input type="file" class="input" formControlName="imageName"> -->
+ <!-- <br> -->
+  
   <button  class="submitbtn" mat-raised-button style="background-color: aquamarine;" [disabled]="hotelRegistration.invalid" *ngIf="!dataById" (click)="submit()" >Submit</button>
   <button  class="submitbtn" mat-raised-button style="background-color: aquamarine;" [disabled]="hotelRegistration.invalid" *ngIf="dataById" (click)="update()">Update</button>
   </form>

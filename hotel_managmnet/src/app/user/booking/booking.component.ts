@@ -30,6 +30,7 @@ formLoad(){
     city:['',[Validators.required]],
     hotelName:[this.getHotelBookData ? this.getHotelBookData.hotelName:'' ],
     hotelContacNumber:[this.getHotelBookData ? this.getHotelBookData.hotelMobNo:''],
+    hotleImage:[this.getHotelBookData? this.getHotelBookData.imageName:'']
   })
 
 

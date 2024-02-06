@@ -12,7 +12,7 @@ constructor(private apiCall:ApiCallService ,private router:Router){}
 
 searchData: any;
 tableDataShowHide:boolean=false
-tableShow: boolean=false
+ 
 
   
 
@@ -20,7 +20,7 @@ tableShow: boolean=false
   loginData:any;
   hotelList:any;
   deletBox:boolean=false
-
+  tableShow:boolean=true 
   ngOnInit(){
   this.loginData= this.apiCall.logiData  //login data get and put loginData varible
  this.apiCall.getApilCall(this.endPoint).subscribe(res=>{  // get hotel list data in hotel lis property

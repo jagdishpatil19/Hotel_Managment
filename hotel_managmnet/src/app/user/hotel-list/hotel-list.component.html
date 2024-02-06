@@ -4,35 +4,30 @@
 
  
  <app-user-navbar></app-user-navbar>
-<div class="mainDiv"  *ngIf="tableDataShowHide">
+<!-- <div class="mainDiv"  *ngIf="tableDataShowHide"> -->
     <div class="search">
        <input type="text" placeholder="Search your hotel" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
     </div>
-  <div class="table" *ngIf="tableShow" >
-  
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Mobile No</th>
-            <th>HotelName</th>
-            <th>State</th>
-            <th>City</th>
-            <th>Hotel Menu</th>
-            <th>RoomAvailble</th>
-            
-           </tr>
-           <tr *ngFor="let data of hotelList |search:searchData">
-     
-              <td >{{data.ownerName | titlecase}} </td>
-              <td >{{data.ownerMobNo | titlecase}} </td>
-              <td >{{data.hotelName | titlecase}} </td>
-              <td >{{data.state | titlecase}} </td>
-              <td >{{data.city | titlecase}} </td>
-              <td >{{data.hotelMenu | titlecase}} </td>
-              <td >{{data.roomsAvailable | titlecase}} </td>
-              <td> <button mat-raised-button color="primary" (click)="booking(data.id)">Book Now</button></td>
-           </tr>
-    </table>
-    </div>
-</div>
+
+    <div class="mainDiv"  *ngIf="tableDataShowHide">
+      <div class="table" *ngIf="tableShow">
+        
+        <mat-card class="example-card" *ngFor="let data of hotelList |search:searchData ">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title> <b>Hotel {{data.hotelName|titlecase}}</b></mat-card-title>
+              <mat-card-subtitle> {{data.hotelMenu |titlecase}}</mat-card-subtitle>
+              <img mat-card-lg-image src={{data.imageName}}>
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Owner Name - {{data.ownerName|titlecase}}</p>
+            <p> Contact to - {{data.hotelMobNo}}</p>
+            <p> Rooms Availble - {{data.roomsAvailable|titlecase}}</p>
+            <button mat-raised-button color="primary" (click)="booking(data.id)">Book Now</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+   
 </body>

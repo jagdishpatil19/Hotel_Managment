@@ -112,6 +112,7 @@
       "hotelMenu": "Non-Veg",
       "hotelMobNo": "0987654321",
       "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image1.jpg",
       "id": 1
     },
     {
@@ -124,6 +125,7 @@
       "hotelMenu": "veg & Non-Veg",
       "hotelMobNo": "0987654432",
       "roomsAvailable": "no",
+      "imageName": "/assets/hotelImages/image2.jpg",
       "id": 2
     },
     {
@@ -136,6 +138,7 @@
       "hotelMenu": "Non-Veg",
       "hotelMobNo": "2333222443",
       "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image3.jpg",
       "id": 3
     },
     {
@@ -148,6 +151,7 @@
       "hotelMenu": "Non-Veg",
       "hotelMobNo": "2233222321",
       "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image4.jpg",
       "id": 4
     },
     {
@@ -160,6 +164,7 @@
       "hotelMenu": "veg & Non-Veg",
       "hotelMobNo": "1222211111",
       "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image5.jpg",
       "id": 5
     },
     {
@@ -172,31 +177,28 @@
       "hotelMenu": "Non-Veg",
       "hotelMobNo": "1232321122",
       "roomsAvailable": "yes",
-      "imageName": "C:\\fakepath\\hotel image2.jpg",
+      "imageName": "/assets/hotelImages/image6.jpg",
       "id": 6
-    },
-    {
-      "ownerName": "jagdish",
-      "ownerMobNo": "1234567890",
-      "hotelName": "sssss",
-      "state": "Andhra Pradesh",
-      "city": "ssss",
-      "pinCode": "ssssss",
-      "hotelMenu": "veg & Non-Veg",
-      "hotelMobNo": "2222222222",
-      "roomsAvailable": "yes",
-      "imageName": "C:\\fakepath\\signin image.jpg",
-      "id": 7
     }
   ],
   "hotelBooking": [
     {
       "userName": "user",
       "mobileNumber": "1212121212",
-      "city": "kolhapur",
-      "hotelName": "7/12",
-      "hotelContacNumber": "0987654432",
+      "city": "kowad",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "hotleImage": "/assets/hotelImages/image1.jpg",
       "id": 1
+    },
+    {
+      "userName": "user",
+      "mobileNumber": "1212112121",
+      "city": "kagal",
+      "hotelName": "taj",
+      "hotelContacNumber": "2333222443",
+      "hotleImage": "/assets/hotelImages/image3.jpg",
+      "id": 2
     }
   ]
 }

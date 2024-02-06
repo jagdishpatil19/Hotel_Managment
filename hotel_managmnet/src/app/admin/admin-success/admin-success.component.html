@@ -1,46 +1,46 @@
-<div class="btn">
-  <button mat-raised-button (click)="logOut()"><b> Log-Out</b></button>
-<button mat-raised-button (click)="showList()"><b> Hotel List</b> </button>
-
+<body>
+<div class="header">
+  <div class="btn">
+    <button mat-raised-button (click)="logOut()"><b> Log-Out</b></button>
+  <button mat-raised-button (click)="showList()"><b> Hotel List</b> </button>
+  
+  </div>
+  
+  
+  <!-- table create -->
+  
+   <div class="search" *ngIf="tableDataShowHide">
+      <input type="text" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
+   </div>
 </div>
 
 
-<!-- table create -->
-<div class="mainDiv"  *ngIf="tableDataShowHide">
- <div class="search">
-    <input type="search" [(ngModel)]="searchData"><span><mat-icon >search</mat-icon></span>
- </div>
-<div class="table" *ngIf="tableShow" >
-    
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Mobile No</th>
-            <th>HotelName</th>
-            <th>State</th>
-            <th>City</th>
-            <th>Hotel Menu</th>
-            <th>RoomAvailble</th>
-            <th>Delete</th>
-           </tr>
-           <tr *ngFor="let data of hotelList">
-     
-              <td >{{data.ownerName | titlecase}} </td>
-              <td >{{data.ownerMobNo | titlecase}} </td>
-              <td >{{data.hotelName | titlecase}} </td>
-              <td >{{data.state | titlecase}} </td>
-              <td >{{data.city | titlecase}} </td>
-              <td >{{data.hotelMenu | titlecase}} </td>
-              <td >{{data.roomsAvailable | titlecase}} </td>
 
-               <td><mat-icon  matTooltip="delete"
-                 matTooltipClass="example-tooltip-uppercase"
-                 aria-label="Button that shows a red tooltip"
-                 class="example-button" (click)="delet(data.hotelName ,data.id)" >delete</mat-icon></td>
-           </tr>
-    </table>
+ <div class="mainDiv"  *ngIf="tableDataShowHide">
+<div class="table" *ngIf="tableShow">
+  
+  <mat-card class="example-card" *ngFor="let data of hotelList |search:searchData ">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title> <b>Hotel {{data.hotelName|titlecase}}</b></mat-card-title>
+        <mat-card-subtitle>{{data.hotelMenu|titlecase}}</mat-card-subtitle>
+        <img mat-card-lg-image src={{data.imageName}}>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Owner Name - {{data.ownerName|titlecase}}</p>
+      <p> Contact to - {{data.hotelMobNo}}</p>
+      <p> Rooms Availble - {{data.roomsAvailable|titlecase}}</p>
+      <mat-icon   matTooltip="delete"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Button that shows a red tooltip"
+        class="example-button" (click)="delet(data.hotelName ,data.id)" >delete</mat-icon>
+    </mat-card-content>
+  </mat-card>
 </div>
 </div>
+
+<!-- delet box start -->
 <div class="deleteBox" *ngIf="deletBox">
     <h1 mat-dialog-title>Delete file</h1>
     <div mat-dialog-content>
@@ -58,3 +58,6 @@
     <div class="deleted" *ngIf="deletSuccsess" >
         <b>Deleted</b>
     </div>
+  
+      
+    </body>

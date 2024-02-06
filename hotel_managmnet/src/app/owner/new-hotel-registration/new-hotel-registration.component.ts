@@ -22,8 +22,6 @@ export class NewHotelRegistrationComponent {
    
     this.dataById = this.apiCall.dataByIdGet;
     console.log(this.dataById, 'this is data by id');
-    // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerName : 'hhhh');
-    // console.log('this is regs in data ',this.dataById ? this.dataById?.ownerMobNo : 'hhhh222');
      this.formLoad();
   }
   formLoad() {
@@ -37,8 +35,8 @@ export class NewHotelRegistrationComponent {
       hotelMenu: [this.dataById ? this.dataById?.hotelMenu : '',[Validators.required],],
       hotelMobNo: [ this.dataById ? this.dataById?.hotelMobNo : '',[Validators.maxLength(10), Validators.minLength(10)],],
       roomsAvailable: [ this.dataById ? this.dataById?.roomsAvailable : '',[Validators.required],],
-      // ownerCheck:[''],
-      // userCheck:['']
+      imageName:[]
+       
     });
   }
 

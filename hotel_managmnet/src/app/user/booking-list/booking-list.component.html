@@ -1,30 +1,34 @@
 <body>
    <app-user-navbar></app-user-navbar>
-   <table *ngIf="tableHide">
-      <tr>
-          <th>Name</th>
-          <th>Mobile No</th>
-          <th>City</th>
-          <th>HotelName</th>
-          <th>Hotel Contact No</th>
-          <th>Delete</th>
-          
    
-          
-         </tr>
-         <tr *ngFor="let data of myBookingList">
-   
-            <td >{{data.userName | titlecase}} </td>
-            <td >{{data.mobileNumber | titlecase}} </td>
-            <td >{{data.city | titlecase}} </td>
-            <td >{{data.hotelName | titlecase}} </td>
-            <td >{{data.hotelContacNumber | titlecase}} </td>
-            <td><mat-icon  matTooltip="delete"
+
+   <div class="mainDiv"   *ngIf="tableHide">
+      <div class="title">
+         <h1>My Booking List</h1>
+      </div>
+      <div class="table">
+        
+        <mat-card class="example-card" *ngFor="let data of  myBookingList ">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title> <b>Hotel {{data.hotelName|titlecase}}</b></mat-card-title>
+              <mat-card-subtitle>{{data.hotelContacNumber}}</mat-card-subtitle>
+              <img mat-card-lg-image src={{data.hotleImage}}>
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <p> Booking Name - {{data.userName|titlecase}}</p>
+            <p>    contact No- {{data.mobileNumber}}</p>
+            <p>  City  - {{data.city|titlecase}}</p>
+            <mat-icon  matTooltip="delete Booking"
                matTooltipClass="example-tooltip-uppercase"
                aria-label="Button that shows a red tooltip"
-               class="example-button" (click)="delet(data.id,data.hotelName)">delete</mat-icon></td>
-         </tr>
-  </table>
+               class="example-button" (click)="delet(data.id,data.hotelName)">delete</mat-icon>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      </div>
+    <!-- delet box start -->
   <div class="deleteBox" *ngIf="deletBox">
    <h1 mat-dialog-title>Delete file</h1>
    <div mat-dialog-content>
@@ -39,6 +43,6 @@
    </div>
    
    <div class="error" *ngIf="error">
-      <h1>No booking</h1>
+      <h1 >No booking</h1>
    </div>
 </body>
