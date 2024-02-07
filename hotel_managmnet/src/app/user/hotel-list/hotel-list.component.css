@@ -6,7 +6,7 @@ body{
 .search span{
     position: absolute;
     top: 105px;
-    left: 980px;
+    left: 820px;
     scale: 1.5;
      
 }
@@ -16,7 +16,7 @@ body{
     left: 45%;
 
     height: 25px;
-    scale: 2;
+    scale:1.7;
     width: 200px;
     box-shadow: 0px 8px 20px black;
     border:none;
@@ -25,7 +25,7 @@ border-radius: 20px;
 .mainDiv{
     position: relative;
     top: 100px;
-    height:575px;
+    height:428px;
     overflow: auto;
   
 }
@@ -34,8 +34,8 @@ border-radius: 20px;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    top: 50px;
-    left:36%;
+    top: 20px;
+   left: 130px;
     width: auto;
      
      
@@ -50,11 +50,10 @@ border-radius: 20px;
 }
 .example-card {
     display: flex;
-      max-width: 500px;
+      max-width: 1000px;
       margin-bottom:10px;
       padding: 5px;
       border: 1px solid black;
-     
     }
 .example-card p{
     margin-bottom: 5px;
@@ -63,6 +62,33 @@ border-radius: 20px;
   }
   .example-card button{
     position: relative;
-    left: 330px;
+    left:87%;
     bottom: 10px;
+  }
+  /* images displyer */
+  .imageBox{
+    height: 520px;
+    width: 750px;
+    /* background-color: aqua; */
+    
+    position: absolute;
+    top: 50px;
+    left: 250px;
+  
+  }
+  .imageBox img{
+    height: 500px;
+    box-shadow: 0px 0px 1000px black;
+    border: 1px solid black;
+  }
+    
+  .imageBox button{
+    position:absolute;
+    
+    bottom: 480px;
+    color:red;
+  }
+  .matIcon{
+    position: relative;
+    top: 5px;
   }

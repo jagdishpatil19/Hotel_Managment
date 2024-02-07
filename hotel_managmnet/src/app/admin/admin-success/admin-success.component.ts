@@ -74,4 +74,16 @@ else{
   cancle() {
     this.deletBox=false
   }
+
+
+  //image display
+  imagePath:any;
+  imageDisplayer:boolean=false
+  imageDisplay(image:any){
+   this.imagePath=image
+   this.imageDisplayer=true
+  }
+  closeImage(){
+    this.imageDisplayer=false
+  }
 }

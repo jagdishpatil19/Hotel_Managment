@@ -15,19 +15,25 @@
         <mat-card class="example-card" *ngFor="let data of hotelList |search:searchData ">
           <mat-card-header>
             <mat-card-title-group>
-              <mat-card-title> <b>Hotel {{data.hotelName|titlecase}}</b></mat-card-title>
+              <mat-card-title><mat-icon class="matIcon" >account_balance</mat-icon> <b> Hotel {{data.hotelName|titlecase}}</b></mat-card-title>
               <mat-card-subtitle> {{data.hotelMenu |titlecase}}</mat-card-subtitle>
-              <img mat-card-lg-image src={{data.imageName}}>
+              <img mat-card-lg-image src={{data.imageName}} (click)="imageDisplay(data.imageName)">
             </mat-card-title-group>
           </mat-card-header>
           <mat-card-content>
-            <p>Owner Name - {{data.ownerName|titlecase}}</p>
-            <p> Contact to - {{data.hotelMobNo}}</p>
-            <p> Rooms Availble - {{data.roomsAvailable|titlecase}}</p>
+            <p> <mat-icon class="matIcon">account_circle</mat-icon>Owner Name - {{data.ownerName|titlecase}}</p>
+            <p> <mat-icon class="matIcon">call</mat-icon> Contact to - {{data.hotelMobNo}}</p>
+            <p> <mat-icon class="matIcon">book</mat-icon> Rooms Availble - {{data.roomsAvailable|titlecase}}</p>
             <button mat-raised-button color="primary" (click)="booking(data.id)">Book Now</button>
           </mat-card-content>
         </mat-card>
       </div>
       </div>
-   
+   <!-- image displayer -->
+   <div class="imageBox"*ngIf="imageDisplayer" >
+      
+    <img *ngIf="imageDisplayer"  src="{{imagePath}}" alt=""><button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="closeImage()">
+      <mat-icon  >close</mat-icon>
+    </button>
+  </div>
 </body>

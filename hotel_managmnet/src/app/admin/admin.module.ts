@@ -6,14 +6,16 @@ import { AdminLandingComponent } from './admin-landing/admin-landing.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { AdminSuccessComponent } from './admin-success/admin-success.component';
-import { SearchPipe } from '../pipes/search.pipe';
+import { SearchingPipe } from './pipes/searching.pipe';
+// import { SearchPipe } from '../pipes/search.pipe';
  
 
 @NgModule({
   declarations: [
     AdminLandingComponent,
     AdminSuccessComponent,
-    SearchPipe,
+    SearchingPipe,
+    // SearchPipe,
   ],
   imports: [
     CommonModule,

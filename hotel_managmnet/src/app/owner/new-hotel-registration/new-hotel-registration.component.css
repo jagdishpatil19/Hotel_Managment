@@ -31,7 +31,7 @@ box-shadow: 10px 10px 70px black;
 }
 .formBox{
     width: 400px;
-    height: 550px;
+    height: 415px;
     background-color:transparent;
      backdrop-filter:blur(2px);
   position: relative;

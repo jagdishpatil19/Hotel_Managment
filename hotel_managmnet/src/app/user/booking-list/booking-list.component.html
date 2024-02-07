@@ -18,12 +18,14 @@
           </mat-card-header>
           <mat-card-content>
             <p> Booking Name - {{data.userName|titlecase}}</p>
-            <p>    contact No- {{data.mobileNumber}}</p>
+            <p>   contact No- {{data.mobileNumber}}</p>
             <p>  City  - {{data.city|titlecase}}</p>
-            <mat-icon  matTooltip="delete Booking"
-               matTooltipClass="example-tooltip-uppercase"
-               aria-label="Button that shows a red tooltip"
-               class="example-button" (click)="delet(data.id,data.hotelName)">delete</mat-icon>
+            <button matTooltip="delete Booking"
+            matTooltipClass="example-tooltip-uppercase"
+            aria-label="Button that shows a red tooltip"
+            class="example-button" (click)="delet(data.id,data.hotelName)"> Delete
+              <mat-icon >delete</mat-icon>
+            </button>
           </mat-card-content>
         </mat-card>
       </div>

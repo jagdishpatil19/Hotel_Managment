@@ -57,4 +57,16 @@ export class HotelListComponent {
    
   this.router.navigateByUrl("user/booking")
     }
+
+    // image displayer
+    //image display
+  imagePath:any;
+  imageDisplayer:boolean=false
+  imageDisplay(image:any){
+   this.imagePath=image
+   this.imageDisplayer=true
+  }
+  closeImage(){
+    this.imageDisplayer=false
+  }
 }
