@@ -1,0 +1,21 @@
+<body>
+     
+ <h1>HOTEL BOOKING LIST</h1>
+ <table>
+    <tr style="background-color: rgb(23, 238, 238);">
+        <th>User Name</th>
+        <th>Contact No.</th>
+        <th>Hotel Name</th>
+        <th>Hotel Contact</th>
+        <th>  Booking date</th>
+    </tr>
+    <tr   *ngFor=" let list of bookingData">
+        <td>{{list.userName}}</td>
+        <td>{{list.mobileNumber}}</td>
+        <td>{{list.hotelName}}</td>
+        <td>{{list.hotelContacNumber}}</td>
+        <td>{{list.date}}</td>
+    </tr>
+ </table>
+
+</body>

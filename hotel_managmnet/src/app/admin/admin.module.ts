@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { AdminSuccessComponent } from './admin-success/admin-success.component';
 import { SearchingPipe } from './pipes/searching.pipe';
+import { BookingDataComponent } from './booking-data/booking-data.component';
 // import { SearchPipe } from '../pipes/search.pipe';
  
 
@@ -15,6 +16,7 @@ import { SearchingPipe } from './pipes/searching.pipe';
     AdminLandingComponent,
     AdminSuccessComponent,
     SearchingPipe,
+    BookingDataComponent,
     // SearchPipe,
   ],
   imports: [

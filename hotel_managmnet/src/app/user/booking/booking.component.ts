@@ -14,12 +14,13 @@ constructor(private apiCall:ApiCallService ,private formBuilder:FormBuilder ,pri
 getHotelBookData:any;  // get hotel booking data with id 
 endPoint:string='hotelBooking'
 bookingForm!:FormGroup;
-
+date:any=new Date().toDateString()
 ngOnInit(){
   this.getHotelBookData= this.apiCall.hotelBookData
    console.log(this.getHotelBookData)
 
    this.formLoad()
+   console.log(this.date)
 }
 
 formLoad(){
@@ -30,7 +31,8 @@ formLoad(){
     city:['',[Validators.required]],
     hotelName:[this.getHotelBookData ? this.getHotelBookData.hotelName:'' ],
     hotelContacNumber:[this.getHotelBookData ? this.getHotelBookData.hotelMobNo:''],
-    hotleImage:[this.getHotelBookData? this.getHotelBookData.imageName:'']
+    hotleImage:[this.getHotelBookData? this.getHotelBookData.imageName:''],
+    date:[this.date]
   })
 
 

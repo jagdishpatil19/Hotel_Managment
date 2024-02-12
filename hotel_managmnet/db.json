@@ -199,6 +199,36 @@
       "hotelContacNumber": "2333222443",
       "hotleImage": "/assets/hotelImages/image3.jpg",
       "id": 2
+    },
+    {
+      "userName": "user",
+      "mobileNumber": "1212121212",
+      "city": "wsws",
+      "hotelName": "7/12",
+      "hotelContacNumber": "0987654432",
+      "hotleImage": "/assets/hotelImages/image2.jpg",
+      "date": "Mon Feb 12 2024",
+      "id": 3
+    },
+    {
+      "userName": "user2",
+      "mobileNumber": "8888888889",
+      "city": "Nashik",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "hotleImage": "/assets/hotelImages/image1.jpg",
+      "date": "Mon Feb 12 2024",
+      "id": 4
+    },
+    {
+      "userName": "user2",
+      "mobileNumber": "1234567890",
+      "city": "jugiuh",
+      "hotelName": "taj",
+      "hotelContacNumber": "2333222443",
+      "hotleImage": "/assets/hotelImages/image3.jpg",
+      "date": "Mon Feb 12 2024",
+      "id": 5
     }
   ]
 }

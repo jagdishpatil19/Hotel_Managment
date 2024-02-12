@@ -1,5 +1,5 @@
 .logOut{
-    position: relative; left:490px;
+    position: relative; left:470px;
 }
 ul{
     display: flex;
@@ -15,4 +15,6 @@ ul li a{
 }
 ul li a:hover{
     color: aqua;
+     
+   border-bottom: 1px solid white;
 }

@@ -1,0 +1,24 @@
+body{
+    background: linear-gradient(red,rgb(239, 84, 226),rgb(242, 255, 168));
+}
+tr,th,td{
+    border: 2px solid black;
+   padding: 20px;
+   width: 100px;
+}
+table{
+    border-collapse:collapse;
+    margin: auto;
+    position: relative;
+    top: 70px;
+    background-color: aquamarine;
+}
+h1{
+ display: flex;  justify-content: center;
+ position: relative;
+ top: 50px;
+ font-weight: bolder;
+ font-size: 30px;
+ color: white;
+ text-shadow: 5px 10px 10px rgb(0, 0, 0);
+}

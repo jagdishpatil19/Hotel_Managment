@@ -86,4 +86,5 @@ else{
   closeImage(){
     this.imageDisplayer=false
   }
+  
 }
