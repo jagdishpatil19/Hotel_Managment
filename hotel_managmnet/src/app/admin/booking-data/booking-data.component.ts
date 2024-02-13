@@ -16,12 +16,8 @@ export class BookingDataComponent {
   ngOnInit(){
     this.apiCall.getApilCall(this.endPoint).subscribe(res=>{
       this.bookingData=res
-      console.log(this.bookingData.length)
-      for (let index = 0; index < this.bookingData.length; index++) {
-       
-        this.obs=index
-        console.log(this.obs)
-      }
+ 
+      
     })
     
   }

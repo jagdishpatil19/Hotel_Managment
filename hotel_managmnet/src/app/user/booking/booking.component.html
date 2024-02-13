@@ -2,7 +2,7 @@
   <div class="formBox">
    
 
-    <h1 >Book Now</h1>
+    <div class="header"><h1 >Book Now</h1></div>
 <form [formGroup]="bookingForm"  >
     <mat-form-field appearance="fill" class="input">
         <mat-label>Enter Your Name</mat-label>
@@ -36,11 +36,11 @@
         <mat-icon matSuffix>call</mat-icon>
       </mat-form-field>
       <br>
-      <mat-form-field appearance="fill" class="input">
+      <!-- <mat-form-field appearance="fill" class="input">
         <mat-label>images</mat-label>
         <input   matInput placeholder="hotel Contac Number"   formControlName='hotleImage'>
  
-      </mat-form-field>
+      </mat-form-field> -->
       <br>
       <button mat-raised-button color="primary" class="bookBtn" [disabled]="bookingForm.invalid" (click)="submit()">Book</button>
 </form>

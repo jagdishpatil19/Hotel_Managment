@@ -1,19 +1,35 @@
+body{
+ background-image: url("https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+ background-size: cover;
+
+height: 700px;
+}
+.header{
+     background-color: rgba(0, 0, 0, 0.256);
+    position: relative;
+    bottom: 15px;
+    height: 50px;
+}
 .formBox{
-    background-color: aqua;
+     
     height:fit-content;
     width:fit-content;
   padding: 50px;
   position: relative;
   top: 50px;
   left: 50px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  backdrop-filter: blur(1px);
 }
 
 h1{
     position: relative;
-    bottom: 25px;
+     top: 10px;
     left: 110px;
     font-weight: bolder;
     font-size: 30px;
+     color: #00eeff;
 }
 
 .bookBtn{

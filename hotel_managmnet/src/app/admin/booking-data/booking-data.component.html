@@ -10,11 +10,11 @@
         <th>  Booking date</th>
     </tr>
     <tr   *ngFor=" let list of bookingData">
-        <td>{{list.userName}}</td>
-        <td>{{list.mobileNumber}}</td>
-        <td>{{list.hotelName}}</td>
-        <td>{{list.hotelContacNumber}}</td>
-        <td>{{list.date}}</td>
+        <td>{{list.userName |titlecase}}</td>
+        <td>{{list.mobileNumber |titlecase}}</td>
+        <td>{{list.hotelName |titlecase}}</td>
+        <td>{{list.hotelContacNumber |titlecase}}</td>
+        <td>{{list.date |titlecase}}</td>
     </tr>
  </table>
 

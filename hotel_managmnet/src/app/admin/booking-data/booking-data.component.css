@@ -11,7 +11,7 @@ table{
     margin: auto;
     position: relative;
     top: 70px;
-    background-color: aquamarine;
+    background-color: rgba(207, 255, 239, 0.664);
 }
 h1{
  display: flex;  justify-content: center;
