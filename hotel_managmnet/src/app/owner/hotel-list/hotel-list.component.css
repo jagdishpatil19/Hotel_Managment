@@ -1,4 +1,7 @@
- 
+ body{
+    background-image: url('https://images.pexels.com/photos/15440423/pexels-photo-15440423/free-photo-of-keys-with-a-leather-key-chain-and-a-leather-case-lying-on-a-book-on-a-dresser.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
+ }
  
 .tableBox{
     width: 700px;
@@ -14,6 +17,7 @@
     left: 250px;
     font-size: 30px;
     font-weight: bold;
+    color: white;
 }
 
 tr,th,td{

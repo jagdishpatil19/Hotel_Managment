@@ -129,32 +129,6 @@
       "id": 2
     },
     {
-      "ownerName": "jagdish",
-      "ownerMobNo": "1234567890",
-      "hotelName": "taj",
-      "state": "Maharashtra",
-      "city": "mumbai",
-      "pinCode": "343222",
-      "hotelMenu": "Non-Veg",
-      "hotelMobNo": "2333222443",
-      "roomsAvailable": "yes",
-      "imageName": "/assets/hotelImages/image3.jpg",
-      "id": 3
-    },
-    {
-      "ownerName": "shri",
-      "ownerMobNo": "1111111111",
-      "hotelName": "shejal",
-      "state": "Maharashtra",
-      "city": "pune",
-      "pinCode": "232223",
-      "hotelMenu": "Non-Veg",
-      "hotelMobNo": "2233222321",
-      "roomsAvailable": "yes",
-      "imageName": "/assets/hotelImages/image4.jpg",
-      "id": 4
-    },
-    {
       "ownerName": "shri",
       "ownerMobNo": "1111111111",
       "hotelName": "Ajinkya Garden",
@@ -169,28 +143,19 @@
     },
     {
       "ownerName": "jagdish",
-      "ownerMobNo": "1234567890",
-      "hotelName": "kinara",
+      "ownerMobNo": "1233445342",
+      "hotelName": "raj",
       "state": "Maharashtra",
-      "city": "pune",
-      "pinCode": "232232",
+      "city": "kolhapur",
+      "pinCode": "213423",
       "hotelMenu": "Non-Veg",
-      "hotelMobNo": "1232321122",
-      "roomsAvailable": "yes",
-      "imageName": "/assets/hotelImages/image6.jpg",
+      "hotelMobNo": "3243343234",
+      "roomsAvailable": "no",
+      "imageName": null,
       "id": 6
     }
   ],
   "hotelBooking": [
-    {
-      "userName": "user",
-      "mobileNumber": "1212121212",
-      "city": "kowad",
-      "hotelName": "sagar",
-      "hotelContacNumber": "0987654321",
-      "hotleImage": "/assets/hotelImages/image1.jpg",
-      "id": 1
-    },
     {
       "userName": "user",
       "mobileNumber": "1212112121",
@@ -199,16 +164,6 @@
       "hotelContacNumber": "2333222443",
       "hotleImage": "/assets/hotelImages/image3.jpg",
       "id": 2
-    },
-    {
-      "userName": "user",
-      "mobileNumber": "1212121212",
-      "city": "wsws",
-      "hotelName": "7/12",
-      "hotelContacNumber": "0987654432",
-      "hotleImage": "/assets/hotelImages/image2.jpg",
-      "date": "Mon Feb 12 2024",
-      "id": 3
     },
     {
       "userName": "user2",
@@ -229,6 +184,16 @@
       "hotleImage": "/assets/hotelImages/image3.jpg",
       "date": "Mon Feb 12 2024",
       "id": 5
+    },
+    {
+      "userName": "user",
+      "mobileNumber": "2323223323",
+      "city": "pune",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "hotleImage": "/assets/hotelImages/image1.jpg",
+      "date": "Sun Feb 18 2024",
+      "id": 6
     }
   ]
 }
