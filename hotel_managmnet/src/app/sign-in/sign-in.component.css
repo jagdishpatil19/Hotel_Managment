@@ -1,73 +1,73 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* background-color: black; */
-  background-image: url('https://i0.wp.com/www.lovelycoding.org/wp-content/uploads/2022/09/Hotel-Management-System.webp?resize=640%2C427&ssl=1');
+    align-items: center;
+    background-image: url('https://i0.wp.com/www.lovelycoding.org/wp-content/uploads/2022/09/Hotel-Management-System.webp?resize=640%2C427&ssl=1');
     background-size: cover;
-  min-height: 100vh;
+    min-height: 100vh;
     color: aliceblue;
 }
-.main-box{
-    position:absolute;left:800px; top: 70px;
+
+.main-box {
+    position: absolute;
+    left: 75%;
+    top: 50px;
+    transform: translateX(-50%);
     height: 450px;
     width: 400px;
     background-color: hsl(240, 83%, 9%);
     overflow: hidden;
-border-radius: 50px 0px;
- border:2px solid rgb(255, 255, 255);
-box-shadow: -10px 10px 30px rgb(255, 255, 255);
-/* scale:1.2; */
+    border-radius: 50px 0;
+    border: 2px solid #fff;
+    box-shadow: -10px 10px 30px #fff;
+}
 
-}
-.main-box::before{
+.main-box::before, .main-box::after {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     height: 450px;
     width: 400px;
-    background: linear-gradient(60deg,transparent,hsl(185, 100%, 50%));
     transform-origin: bottom right;
     animation: border 6s linear infinite;
-    scale:1.2;
+    scale: 1.2;
 }
-.main-box::after{
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    height: 450px;
-    width: 400px;
-    background: linear-gradient(60deg,transparent,#ff00ee) ;
-    transform-origin: bottom right;
-    animation: border 6s linear infinite;
+
+.main-box::before {
+    background: linear-gradient(60deg, transparent, hsl(185, 100%, 50%));
+}
+
+.main-box::after {
+    background: linear-gradient(60deg, transparent, #ff00ee);
     animation-delay: -3s;
-    scale:1.2;
 }
-@keyframes border{
-    0%{
+
+@keyframes border {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
- }
-h2{
-     position: relative;
-     top: 18px;
-     left: 160px;
-    color: rgb(0, 217, 255);
-     font-weight: 900;
-     font-size: 30px;
 }
-input{
+
+h2 {
+    position: relative;
+    top: 18px;
+    left: 160px;
+    color: rgb(0, 217, 255);
+    font-weight: 900;
+    font-size: 30px;
+}
+
+input {
     font-size: 16px;
     margin-left: 50px;
     height: 30px;
@@ -76,86 +76,75 @@ input{
     border-top: none;
     border-left: none;
     border-right: none;
-    border-color:  rgb(11, 195, 232);
-    color: aliceblue;
-    
-
-}
-input {
+    border-color: rgb(11, 195, 232);
     color: coral;
 }
-.submit{
+
+.submit {
     position: relative;
-    left:80px;
+    left: 80px;
     height: 35px;
     width: 250px;
-    border: 1px solid  rgb(11, 195, 232);
-    background-color:rgb(0, 234, 255);
+    border: 1px solid rgb(11, 195, 232);
+    background-color: rgb(0, 234, 255);
     border-radius: 20px;
     font-weight: 600;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
-    /* color:  rgb(11, 195, 232); */
 }
-.forget-password{
+
+.forget-password, .Singup {
     text-decoration: none;
-    color:  rgb(11, 195, 232);
+    color: rgb(11, 195, 232);
+}
+
+.forget-password {
     margin-left: 25px;
 }
-.Singup{
-    text-decoration: none;
-    color:  rgb(11, 195, 232);
+
+.Singup {
     margin-left: 180px;
 }
-input:hover{
-     
-    box-shadow: 0px 0px 10px skyblue;
 
-    
+input:hover {
+    box-shadow: 0px 0px 10px skyblue;
 }
-input:focus{
+
+input:focus {
     background-color: #2bc0da;
     color: black;
 }
- 
- /* .submit:hover{
-    background-color: rgb(0, 255, 255);
-    color: black;
-    
-    
- } */
- 
- a:active{
-    color: red;
- }
-  form{
-    position: absolute;
- inset: 4px; 
- background: rgb(0, 0, 1);
- /* background-image: url("https://images.pexels.com/photos/1842332/pexels-photo-1842332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
- /* background-size: cover; */
- z-index: 1;
- border-radius:100px 0px;
- 
 
-  }
-  
-  form span{
+a:active {
+    color: red;
+}
+
+form {
+    position: absolute;
+    inset: 4px;
+    background: rgb(0, 0, 1);
+    z-index: 1;
+    border-radius: 100px 0;
+}
+
+form span {
     color: red;
     position: relative;
     left: 30px;
     top: 5px;
-  }
- form a{
+}
+
+form a {
     color: aqua;
     position: relative;
     left: 140px;
     bottom: 20px;
- }
- 
-.backBtn{
+}
+
+.backBtn {
     position: relative;
-    top: 40px;  left:170px;
+    top: 40px;
+    left: 170px;
     height: 22px;
     width: 80px;
     background-color: rgb(202, 212, 212);
@@ -163,7 +152,93 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-   }
-   .backBtn:hover{
-       background-color: rgb(172, 185, 196);
-   }
+}
+
+.backBtn:hover {
+    background-color: rgb(172, 185, 196);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .main-box {
+        width: 350px;
+    }
+    input {
+        width: 250px;
+    }
+    .submit {
+        width: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    h2 {
+        left: 140px;
+    }
+    .Singup {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-box {
+        width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h2 {
+        left: 100px;
+        font-size: 25px;
+    }
+    input {
+        width: 200px;
+    }
+    .submit {
+        width: 180px;
+    }
+    .Singup {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-box {
+        width: 250px;
+        height: 400px;
+    }
+    h2 {
+        left: 70px;
+        font-size: 20px;
+    }
+    input {
+        width: 150px;
+        margin-left: 30px;
+    }
+    .submit {
+        width: 150px;
+        left: 50px;
+    }
+    .Singup {
+        margin-left: 80px;
+    }
+    @media (max-width: 576px) {
+        form {
+            padding-left: 10px;
+        }
+    
+        .input input {
+            width: 100%;
+            padding: 6px;
+        }
+    
+        .submitBtn {
+            width: 100%;
+        }
+    
+        form a {
+            left: 40px;
+            bottom: 40px;
+        }
+    }
+}
+ 

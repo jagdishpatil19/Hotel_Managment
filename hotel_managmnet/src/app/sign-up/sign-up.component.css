@@ -2,12 +2,11 @@ body{
     background:linear-gradient(rgb(164, 209, 255),rgb(145, 145, 255));
 }
 .formDiv{
-    height: 550px;
-    width: 500px;
+    max-height: 550px;
+    max-width: 500px;
     background-color: white;
      margin: auto;
      position: relative;
-      top: -20px;
      box-shadow: -8px 10px 20px rgb(0, 0, 0);
      border-radius: 5px;
      overflow:auto;

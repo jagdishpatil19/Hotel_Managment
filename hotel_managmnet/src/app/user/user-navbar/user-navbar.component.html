@@ -1,25 +1,29 @@
   
- <nav>
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <span style="font-size: 30px; color: rgb(1, 238, 255);">Hotel Booking</span>
-        <span class="example-spacer"></span>
-        <div>
-          <ul>
-            <li><a routerLink="/user/userSuccess">Home</a></li>
-            <li><a routerLink="/user/hotelList">Hotel list</a></li>
-            <li><a routerLink="/user/hotelBookingList"> My booking list</a></li>
-            <li class="logOut"> <a routerLink="/landing"> Log-Out</a></li>
-            
-          </ul>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="font-size: 30px; color: rgb(1, 238, 255);">Hotel Booking</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/userSuccess">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/hotelList">Hotel list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/user/hotelBookingList">My booking list</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link logOut" routerLink="/landing">Log-Out</a>
+                </li>
+            </ul>
         </div>
-        
-        
-           
-        
-      </mat-toolbar-row>
-  
-      
-    </mat-toolbar>
-  </nav>
+    </div>
+</nav>
+
  

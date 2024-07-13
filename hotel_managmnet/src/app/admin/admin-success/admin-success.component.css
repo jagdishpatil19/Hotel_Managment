@@ -1,153 +1,166 @@
-  
- body{
+body {
   background-image: url('https://images.pexels.com/photos/453201/pexels-photo-453201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
- }
- .btn{
+  margin: 0;
+}
+
+.header {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   top: 10px;
   left: 10px;
-   
- } 
- 
-.search span{
-    position: absolute;
-    top: 55px;
-    left: 63%;
-    scale: 1.4;
-     
+  padding: 10px;
 }
-.search input{
-    position: absolute;
-    top: 50px;
-    left: 45%;
-    
-    height: 25px;
-    scale:1.6;
-    width: 200px;
-    box-shadow: 0px 8px 20px black;
-    border:none;
-border-radius: 20px;
-}
-.mainDiv{
- 
-    position: relative;
-    top: 100px;
- 
-    height:445px;
-    overflow: auto;
-}
-.table{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    top: 40px;
-    left: 125px;
-    width: 1000px;
-     
-     
-    
-}
- 
-/* delet box style */
-.deleteBox{
-    background-color: rgb(220, 220, 220);
-    width: 250px;
-     position:absolute;
-     top:50px;
-     left: 980px;
-     padding: 10px;
-     border: 2px solid black;
-     box-shadow: 0px 10px 40px black;
-     border-radius: 10px;
-}
-.delBtn{
-    display: flex;
-    justify-content: space-around;
-    gap: 140px;
-}
-.delBtn button:hover{
-    background-color: aqua;
-    border: 1px solid black;
-    }
 
-
-    /* deleted success massage show box */
-
-.deleted{
-    background-color: rgba(209, 143, 143, 0.82);
-    width: 180px;
-    height:18px;
-    font-size: 28px;
-     padding: 30px;
-     padding-left: 100px;
-     border-radius: 60px;
-     box-shadow: 5px 10px 20px black;
-     position:relative;
-     left: 75%;
-  top: 30px;
-     
-}
- .example-button{
-    position: relative;
-    bottom: 3px;
-    left: 854px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    
-    
-}
-.example-button:hover{
-  background-color: red;
-} 
-.deleteIcon{
-  scale: 0.7;
-  position: relative;
- 
-}
-.example-card {
+.btn {
   display: flex;
-    max-width: 1000px;
-    margin-bottom:10px;
-    padding: 5px;
-    border: 1px solid black;
-   
-  }
-  .example-card p{
-    margin-bottom: 5px;
-    font-weight:500;
-    font-size: 16px;
+  gap: 20px;
+}
+
+.search {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search input {
+  position: relative;
+  height: 30px;
+  width: 200px;
+  padding-left: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px black;
+  border: none;
+}
+
+.search span {
+  position: absolute;
+  top: 3px;
+  left: 170px;
+  font-size: 20px;
+}
+
+.mainDiv {
+  position: relative;
+  top: 40px;
+  height: 445px;
+  overflow: auto;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  left: 125px;
+  max-width: 1000px;
+}
+
+.deleteBox {
+  background-color: rgb(220, 220, 220);
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  left: 980px;
+  padding: 10px;
+  border: 2px solid black;
+  box-shadow: 0px 10px 40px black;
+  border-radius: 10px;
+}
+
+.delBtn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.deleted {
+  background-color: rgba(209, 143, 143, 0.82);
+  width: 180px;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 60px;
+  box-shadow: 5px 10px 20px black;
+  position: relative;
+  left: 75%;
+  top: 30px;
+}
+
+.example-card {
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.example-card p {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.imageBox {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50px;
+  left: 250px;
+}
+
+.imageBox img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 1000px black;
+  border: 1px solid black;
+}
+
+.imageBox button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.matIcon {
+  position: relative;
+  top: 5px;
+}
+
+@media (max-width: 768px) {
+  .search input {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 
+  .search span {
+    left: calc(50% + 60px);
+  }
 
-  /* images displyer */
-  .imageBox{
-    height: 520px;
-    width: 750px;
-    /* background-color: aqua; */
-    
-    position: absolute;
-    top: 50px;
-    left: 250px;
-  
+  .table {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .imageBox img{
-    height: 500px;
-    box-shadow: 0px 0px 1000px black;
-    border: 1px solid black;
+
+  .deleteBox {
+    left: calc(50% - 125px);
   }
-    
-  .imageBox button{
-    position:absolute;
-    
-    bottom: 480px;
-    color:red;
+
+  .deleted {
+    left: calc(50% + 125px);
   }
-  .matIcon{
-    position: relative;
-    top: 5px;
+
+  .imageBox {
+    left: calc(50% - 375px);
   }
+}
