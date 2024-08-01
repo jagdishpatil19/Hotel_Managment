@@ -1,0 +1,199 @@
+{
+  "admin": [
+    {
+      "name": "admin",
+      "mobileNo": "0987654321",
+      "panNo": "ADMIN1234A",
+      "email": "admin@gmail.com",
+      "city": "Kolhapur",
+      "gender": "Male",
+      "password": "admin",
+      "confirmPassword": "admin",
+      "Tnc": true,
+      "id": 1
+    },
+    {
+      "name": "admin 2",
+      "mobileNo": "1234567890",
+      "panNo": "ZXCVB7890G",
+      "email": "admin2@gmail.com",
+      "city": "Satara",
+      "gender": "Female",
+      "password": "admin2",
+      "confirmPassword": "admin2",
+      "Tnc": true,
+      "id": 2
+    }
+  ],
+  "owner": [
+    {
+      "name": "owner",
+      "mobileNo": "1234567890",
+      "panNo": "OWNER1234J",
+      "email": "owner@gmail.com",
+      "city": "Nashik",
+      "gender": "Male",
+      "password": "owner",
+      "confirmPassword": "owner",
+      "Tnc": true,
+      "id": 1
+    },
+    {
+      "name": "owner 2",
+      "mobileNo": "0976286722",
+      "panNo": "MNBVC8797H",
+      "email": "owner2@gmail.com",
+      "city": "Satara",
+      "gender": "Male",
+      "password": "owner2",
+      "confirmPassword": "owner2",
+      "Tnc": true,
+      "id": 2
+    },
+    {
+      "name": "owner3",
+      "mobileNo": "1311233666",
+      "panNo": "ABYTG7688J",
+      "email": "owner3@gmail.com",
+      "city": "Mumbai",
+      "gender": "Male",
+      "password": "owner3",
+      "confirmPassword": "owner3",
+      "Tnc": true,
+      "id": 3
+    },
+    {
+      "name": "jagdish",
+      "mobileNo": "1234567890",
+      "panNo": "AWDRE2454K",
+      "email": "jagdis@gmail.com",
+      "city": "Kolhapur",
+      "gender": "Male",
+      "password": "jagdish",
+      "confirmPassword": "jagdish",
+      "Tnc": true,
+      "id": 4
+    }
+  ],
+  "user": [
+    {
+      "name": "user",
+      "mobileNo": "1234512345",
+      "panNo": "USERT1234U",
+      "email": "user@gmail.com",
+      "city": "Nashik",
+      "gender": "Female",
+      "password": "user",
+      "confirmPassword": "user",
+      "Tnc": true,
+      "id": 1
+    },
+    {
+      "name": "user2",
+      "mobileNo": "1234567899",
+      "panNo": "ASDFG7648G",
+      "email": "user2@gmail.com",
+      "city": "Sangli",
+      "gender": "Male",
+      "password": "user2",
+      "confirmPassword": "user2",
+      "Tnc": true,
+      "id": 2
+    }
+  ],
+  "hotelDetails": [
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1234567890",
+      "hotelName": "sagar",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "416597",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "0987654321",
+      "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image1.jpg",
+      "id": 1
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1234567890",
+      "hotelName": "7/12",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "343345",
+      "hotelMenu": "veg & Non-Veg",
+      "hotelMobNo": "0987654432",
+      "roomsAvailable": "no",
+      "imageName": "/assets/hotelImages/image2.jpg",
+      "id": 2
+    },
+    {
+      "ownerName": "shri",
+      "ownerMobNo": "1111111111",
+      "hotelName": "Ajinkya Garden",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "232223",
+      "hotelMenu": "veg & Non-Veg",
+      "hotelMobNo": "1222211111",
+      "roomsAvailable": "yes",
+      "imageName": "/assets/hotelImages/image5.jpg",
+      "id": 5
+    },
+    {
+      "ownerName": "jagdish",
+      "ownerMobNo": "1233445342",
+      "hotelName": "raj",
+      "state": "Maharashtra",
+      "city": "kolhapur",
+      "pinCode": "213423",
+      "hotelMenu": "Non-Veg",
+      "hotelMobNo": "3243343234",
+      "roomsAvailable": "no",
+      "imageName": null,
+      "id": 6
+    }
+  ],
+  "hotelBooking": [
+    {
+      "userName": "user",
+      "mobileNumber": "1212112121",
+      "city": "kagal",
+      "hotelName": "taj",
+      "hotelContacNumber": "2333222443",
+      "hotleImage": "/assets/hotelImages/image3.jpg",
+      "id": 2
+    },
+    {
+      "userName": "user2",
+      "mobileNumber": "8888888889",
+      "city": "Nashik",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "hotleImage": "/assets/hotelImages/image1.jpg",
+      "date": "Mon Feb 12 2024",
+      "id": 4
+    },
+    {
+      "userName": "user2",
+      "mobileNumber": "1234567890",
+      "city": "jugiuh",
+      "hotelName": "taj",
+      "hotelContacNumber": "2333222443",
+      "hotleImage": "/assets/hotelImages/image3.jpg",
+      "date": "Mon Feb 12 2024",
+      "id": 5
+    },
+    {
+      "userName": "user",
+      "mobileNumber": "2323223323",
+      "city": "pune",
+      "hotelName": "sagar",
+      "hotelContacNumber": "0987654321",
+      "hotleImage": "/assets/hotelImages/image1.jpg",
+      "date": "Sun Feb 18 2024",
+      "id": 6
+    }
+  ]
+}

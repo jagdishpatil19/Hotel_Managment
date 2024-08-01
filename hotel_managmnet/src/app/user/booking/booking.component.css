@@ -1,8 +1,10 @@
-body{
- background-image: url("https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
- background-size: cover;
-
-height: 700px;
+body {
+    background-image: url("https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    height:700px; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+    flex-direction: column; /* Center items vertically */
 }
 .header{
      background-color: rgba(0, 0, 0, 0.256);
@@ -10,17 +12,16 @@ height: 700px;
     bottom: 15px;
     height: 50px;
 }
-.formBox{
-     
-    height:fit-content;
-    width:fit-content;
-  padding: 50px;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  background-color: transparent;
-  border: 2px solid rgb(255, 255, 255);
-  backdrop-filter: blur(1px);
+.formBox {
+    padding: 50px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    backdrop-filter: blur(1px); /* Adjust blur effect */
+    width: fit-content; /* Adjust width to content */
+    height: fit-content; /* Adjust height to content */
+    position: relative;
+    top: 50px;
+    left: 50px;
 }
 
 h1{
@@ -38,4 +39,26 @@ h1{
 }
 .input{
     width: 350px;
+}
+@media (max-width: 768px) {
+    .formBox {
+        padding: 20px;
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px); /* Adjust width for smaller screens */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .formBox {
+        padding: 10px;
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px); /* Adjust width for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
 }
